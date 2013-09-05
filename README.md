@@ -11,4 +11,4 @@ sceptical-climate
 +	[Modernizr](http://modernizr.com/)
 +	[d3](http://d3js.org/)
 +	[Respond.js](https://github.com/scottjehl/Respond)
-+	[html5.shiv](https://code.google.com/p/html5shiv/)
++	[html5shiv](https://code.google.com/p/html5shiv/)
