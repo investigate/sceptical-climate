@@ -1,0 +1,22 @@
+{% if page.report_number == "Part 1" %}
+	{% include html-header.html report_number="Part 1" report_number_path="part-1" %}
+{% else %}
+	{% include html-header.html report_number="Part 2" report_number_path="part-2" %}
+{% endif %}
+
+<article class="title-page" role="content">
+{{ content }}
+</article>
+
+{% include social.html %}
+{% include emphasis.html %}
+{% include newsletter.html %}
+{% if page.report_number == "Part 1" %}
+	{% include contents.html report_number="Part 1" report_number_path="part-1" %}
+{% else %}
+	{% include contents.html report_number="Part 2" report_number_path="part-2" %}
+{% endif %}
+
+{% include footer.html %}
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+{% include html-footer.html %}

@@ -1,0 +1,1087 @@
+/*
+Sceptical Climate stylesheet
+Version 1.0
+*/
+
+@import "reset";
+
+@import "mixins";
+
+/* Natural box layout */
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+.chromeframe {position: absolute; top: 0;}
+
+/* @Webfonts
+-------------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+}
+
+
+
+
+/* @Type-scale
+-------------------------------------------------------------------------------*/
+
+
+/* Modular Scale
+	http://modularscale.com/scale/?px1=17&px2=14&ra1=1.667&ra2=0
+	---------------------
+	17px @ 1:1.667
+	14px @ 1:1.667
+*/
+
+$scale-n5	: 0.0625;		/* 1px	0.0625rem	1px			*/
+$scale-n4	: 0.315;		/* n4	0.315rem	5.038px		*/
+$scale-n3	: 0.382;		/* n3	0.382rem	6.118px		*/
+$scale-n2	: 0.637;		/* n2	0.637rem	10.198px	*/
+$scale-n1	: 0.875;		/* n1	0.875rem	14px		*/
+$scale-0	: 1.0625;		/* base	1.0625rem	17px		*/
+$scale-05	: 1.1875;		/* 05 	1.1875rem	19px		*/
+$scale-1	: 1.459;		/* 1	1.459rem	23.338px	*/
+$scale-2 	: 1.771;		/* LH	1.771rem	28.339px	*/
+$scale-3	: 2.432;		/* 3	2.432rem	38.904px	*/
+$scale-4	: 4.053;		/* 4	4.053rem	64.853px	*/
+$scale-5 	: 4.922;		/* 5    4.922rem    78.751px	*/
+$scale-7 	: 6.757;		/* 7    6.757rem    108.110px	*/
+$scale-16	: 31.301;		/* 16	31.301rem	500.808px	*/
+$scale-17	: 38.008;		/* 17 	38.008rem   608.132px   */
+
+/* @Type
+-------------------------------------------------------------------------------*/
+
+$sans-stack: "open sans", verdana, sans-serif ;
+$serif-stack: georgia;
+
+body {
+	font-family: $sans-stack;
+	text-rendering: optimizeLegibility;
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(line-height, $scale-2);
+}
+
+img.logo {
+	display: block;
+}
+
+ h1 {
+	@include rem-fallback(margin-top, $scale-0);
+	@include rem-fallback(font-size, $scale-3);
+	@include rem-fallback(line-height, $scale-4);
+	font-weight: bold;
+}
+
+[role="banner"] h1 {
+	@include rem-fallback(margin-top, 0);
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(line-height, $scale-2);
+}
+.title-page {
+	h1 {
+		.report-name {
+			display: block;
+			text-transform: uppercase;
+			@include rem-fallback( letter-spacing, 0.1);
+			font-weight: 900;
+		}
+	}
+}
+.report-title,
+.report-number,
+.nav-link {
+	display: inline-block;
+	border: none;
+	&:hover,
+	&:focus {
+		border: none;
+		background: transparent;
+	}
+}
+
+.tag-line {
+	display: inline-block;
+	margin-top: 0;
+	font-style: italic;
+	@include rem-fallback( line-height, $scale-1);
+}
+
+.distinct {
+	@include rem-fallback(font-size, $scale-2);
+	@include rem-fallback(line-height, $scale-3);
+}
+
+.supporting {
+	@include rem-fallback(font-size, $scale-n1);
+}
+
+.details {
+	@include rem-fallback(margin-top, $scale-2);
+	@include rem-fallback(font-size, $scale-n1);
+	letter-spacing: 1px;
+}
+
+h2 {
+	@include rem-fallback(font-size, $scale-1);
+	@include rem-fallback(margin, $scale-2, 0, 0, 0);
+	@include rem-fallback(padding, $scale-0, 0, 0, 0);
+	font-weight: bold;
+}
+h2.breadcrumb {
+	@include rem-fallback(font-size, $scale-n1);
+	@include rem-fallback(margin, $scale-1, 0, 0, 0);
+	@include rem-fallback(padding, $scale-1, 0, 0);
+	font-weight: normal;
+	a {
+		border: none;
+	}
+}
+h2#preface .supporting {
+	font-weight: normal;
+}
+h3 {
+	@include rem-fallback(margin, $scale-3, 0, 0, 0);
+	@include rem-fallback(padding, $scale-0, 0, 0, 0);
+	@include rem-fallback(font-size, $scale-0);
+	text-transform: uppercase;
+	@include rem-fallback(letter-spacing, $scale-n5);
+}
+.subsection h3 {
+	@include rem-fallback(margin, 0, 0, 0, 0);
+	@include rem-fallback(font-size, $scale-1);
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+	.primary-nav h3 {
+		@include rem-fallback(margin, $scale-1, 0, 0);
+		text-transform: none;
+		letter-spacing: 0;
+	}
+
+	.primary-nav .discrete {
+		@include rem-fallback(font-size, $scale-n1);
+	}
+
+h4 {
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(margin, $scale-2, 0, 0, 0);
+	@include rem-fallback( padding, $scale-0, 0, 0, 0);
+	font-weight: bold;
+}
+.subsection h4 {
+	@include rem-fallback(margin, $scale-3, 0, 0, 0);
+	@include rem-fallback(padding, $scale-0, 0, 0, 0);
+	@include rem-fallback(font-size, $scale-0);
+	text-transform: uppercase;
+	@include rem-fallback(letter-spacing, $scale-n5);
+}
+
+h5 {
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(margin, $scale-2, 0, 0, 0);
+	@include rem-fallback( padding, $scale-0, 0, 0, 0);
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.subsection h5 {
+	@include rem-fallback(font-size, $scale-0);
+	@include rem-fallback(margin, $scale-2, 0, 0, 0);
+	@include rem-fallback( padding, $scale-0, 0, 0, 0);
+	font-weight: bold;
+}
+
+p, ul, ol, dl, figure {
+	@include rem-fallback(margin, $scale-1, 0, 0);
+}
+
+blockquote {
+    font-style: italic;
+    @include rem-fallback(margin, $scale-2, 0);
+    @include rem-fallback(padding, 0, $scale-1);
+}
+
+ul, ol {
+	list-style-position: outside;
+	@include rem-fallback( padding, 0, 0, 0, $scale-1);
+}
+li {
+}
+
+ul {
+	list-style-type: disc;
+}
+.part-2 article.read > p:first-of-type {
+	@include rem-fallback( font-size, $scale-05);
+}
+
+a.license-viz {
+	text-decoration: none;
+	border: none;
+	float: left;
+	clear: left;
+	@include rem-fallback( height, $scale-2);
+	@include rem-fallback( padding, 0, $scale-0, $scale-2, 0);
+	display: block;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+		border-width: 0;
+	}
+}
+
+.full-credits {
+	dt {
+		@include rem-fallback( margin-top, $scale-1);
+		text-transform: uppercase;
+		font-weight: bold;
+	 	@include rem-fallback( font-size, $scale-n1);
+	}
+	dd {
+		.discrete {
+	 	@include rem-fallback( font-size, $scale-n1);
+		}
+	}
+}
+
+.credits dt,
+.credits dd {
+	display: inline-block;
+	@include rem-fallback( margin-right, $scale-0);
+}
+
+.reference-list {
+	list-style: none;
+	padding: 0;
+	li {
+		@include rem-fallback( margin-top, $scale-0);
+	}
+	cite {
+		font-style: normal;
+	}
+	a {
+		border: none;
+	}
+}
+.p-name {
+	font-style: italic;
+}
+.fig-list {
+	strong {
+		display: block;
+	}
+}
+
+
+/* @Colours
+-------------------------------------------------------------------------------*/
+
+$text-base: #333;
+$discrete: #666;
+$light-contrast: #eee;
+
+$background: #fff;
+
+$primary-lighter: #d6e9ef;
+$primary: #add3de;
+$primary-darker: #0072a2;
+
+$contrast: #f74b01;
+
+/* Remove text-shadow from section */
+::-moz-selection{ background: $primary-lighter; color: $discrete; text-shadow: none; }
+::selection { background: $primary-lighter; color: $discrete; text-shadow: none; }
+
+/*  Set touch-screen highlight colour */
+a:link { -webkit-tap-highlight-color: $primary-lighter; }
+
+ins { background-color: $primary-lighter; color: $discrete; text-decoration: none; }
+mark { background-color: $primary-lighter; color: $discrete; font-style: italic; font-weight: bold; }
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color: $discrete; }
+textarea:-moz-placeholder { color: $discrete; }
+
+body, select, input, textarea {
+	color: $text-base;
+}
+
+$highlight: #f88b2b;
+
+body {
+	background-color: $background;
+}
+
+a {
+	border-bottom: 1px solid $primary;
+    color: $primary-darker;
+    text-decoration: none;
+    word-break: break-word;
+    transition: all 0.3s ease 0s;
+	&:hover,
+	&:focus {
+		background-color: $primary-lighter;
+	    border-bottom: 1px solid $discrete;
+	    color: $text-base;
+	    outline: 0 none;
+	}
+	&:active {
+		background-color: $primary;
+	}
+}
+
+h2.breadcrumb a {
+	color: $text-base;
+}
+
+.report-number {
+	color: $text-base;
+	&:hover,
+	&:focus {
+		color: $primary;
+	}
+}
+.title-page {
+	h1 {
+		.report-name { color: $primary-darker;}
+	}
+}
+
+input, textarea {
+	color: darken($text-base, 25%);
+	border-color: lighten($text-base, 50%);
+	background-color: white;
+	&:focus {
+		border-color: lighten($text-base, 25%);
+	}
+}
+
+	input[type="submit"] {
+		border-color: $primary;
+		background-color: $primary-lighter;
+		color: $text-base;
+		&:focus {
+			background-color: lighten($primary-darker, 5%);
+		}
+	}
+
+.discrete {
+	color: $discrete;
+}
+
+blockquote {
+    border-color: $primary;
+}
+
+.credits dt {
+	color: lighten($text-base, 25%);
+}
+
+.reference-list a strong {
+	color: $text-base;
+}
+
+th {
+	color: darken($text-base, 25%);
+}
+
+thead th.tablesorter-headerDesc,
+thead th.tablesorter-headerAsc  {
+    background-color: $primary-lighter;
+}
+/*
+tbody tr:nth-of-type(odd) {
+  background: lighten($primary, 20%);
+}
+*/
+.full-credits dt {	color: $primary-darker;}
+.full-credits a,
+.credits ul a {
+		border-color: transparent;
+		color: $text-base;
+}
+
+.page-nav {
+	a {
+		background: transparent;
+		color: $text-base;
+		span {
+			background-color: $primary-lighter;
+			color: $primary-darker;
+		}
+	}
+	a:hover,
+	a:focus {
+			color: $primary-darker;
+		span {
+			background-color: $primary-darker;
+			color: $primary-lighter;
+		    transition: all 0.3s ease 0s;
+		}
+	}
+	a:active {
+
+	}
+}
+
+.site-footer {
+	border-top-color: $light-contrast;
+}
+
+kbd {
+	background-color: $light-contrast;
+	border: 1px groove $text-base;
+	@include rem-fallback( padding, 0, $scale-n4);
+	border-radius: 2px;
+	box-shadow: 0px 2px 1px #555;
+}
+
+/* @Navigation
+-------------------------------------------------------------------------------*/
+
+nav ul, nav ol {
+	list-style-type: none;
+	font-weight: bold;
+	@include rem-fallback(letter-spacing, $scale-n5);
+	padding: 0;
+	a {
+		display: block;
+		border-bottom: none;
+		@include rem-fallback(padding, $scale-n4, 0);
+		&:hover, &:focus {
+			border-bottom: none;
+		}
+	}
+	ol, ul {
+		margin-top: 0;
+		@include rem-fallback(font-size, $scale-n1);
+		font-weight: normal;
+		letter-spacing: 0;
+	}
+	ol a, ul a {
+		@include rem-fallback(padding-left, $scale-0);
+	}
+	ol ol a, ol ul a, ul ol a, ul ul a {
+		@include rem-fallback(padding-left, $scale-3);
+	}
+}
+
+.page-nav {
+	a {
+		vertical-align: middle;
+		border: 0;
+		font-weight: bold;
+		display: block;
+		span {
+			@include rem-fallback(padding, $scale-n3, $scale-n2);
+			font-weight: normal;
+			@include rem-fallback(margin, 0, $scale-n1, 0, 0);
+		}
+	}
+}
+.prev-nav {
+	@include rem-fallback(margin-top, $scale-3);
+}
+
+/* @Forms
+-------------------------------------------------------------------------------*/
+
+/* Toggled State */
+
+fieldset,
+label,
+input {
+	display: block;
+}
+input, textarea {
+	@include rem-fallback(margin, $scale-0, 0, 0);
+	width: 100%;
+	@include rem-fallback(border-width, $scale-n5);
+	border-style: solid;
+	@include rem-fallback(padding, $scale-n2, $scale-n3);
+	font-family: $sans-stack;
+	letter-spacing: $scale-n5;
+	vertical-align: middle;
+}
+
+.module.newsletter-form {
+	background-color: $light-contrast;
+	@include rem-fallback(padding, $scale-0, $scale-0, $scale-2);
+	border: 1px solid darken($light-contrast, 5%);
+}
+
+#mc-embedded-subscribe-form {
+	@include rem-fallback(font-size, $scale-n1);
+	h2 {
+		@include rem-fallback(margin-top, $scale-n3);
+		padding-top: 0;
+		@include rem-fallback(font-size, $scale-0);
+	}
+	input[type="email"] {
+		@include rem-fallback(margin, $scale-0, 0, 0);
+		margin-bottom: 0;
+	}
+	input[type="submit"] {
+		margin-top: 0;
+	}
+}
+
+label {
+	@include rem-fallback(margin, $scale-0, 0, 0);
+}
+
+.textarea {
+	width: 100%;
+}
+
+/* @Tables
+-------------------------------------------------------------------------------*/
+
+table {
+	@include rem-fallback( font-size, $scale-n1);
+	text-align: left;
+	@include rem-fallback( margin, $scale-1, 0, 0);
+	padding: 0;
+ 	max-width: 100%;
+}
+figcaption {
+	@include rem-fallback( font-size, $scale-0);
+	@include rem-fallback( margin, 0, 0, $scale-1);
+	text-align: left;
+	font-weight: bold;
+}
+.totals {
+		border-left: 1px $light-contrast solid;
+		border-color: rgba(100,100,100,0.1);
+}
+.total {
+}
+thead {
+	border-bottom: 1px #eee solid;
+	th {
+			vertical-align: bottom;
+	}
+}
+th, td {
+	@include rem-fallback( padding, $scale-n2, $scale-n3, $scale-n1);
+	margin: 0;
+}
+th:first-child {
+	padding-left: 0;
+}
+tbody {
+	@include rem-fallback(line-height, $scale-0);
+}
+tbody th,
+tbody td {
+	vertical-align: top;
+	border-bottom: 1px #bbb solid;
+}
+tbody th {
+	font-weight: normal;
+}
+tbody td {
+/* 	width: 10em; */
+}
+:not(.definition-table) tbody tr:hover th,
+:not(.definition-table) tbody tr:hover td {
+	background-color: #fff4d8;
+}
+
+.percentage {
+	@include rem-fallback(font-size, $scale-n2);
+	letter-spacing: 1px;
+	margin-left: 1em;
+}
+
+th.tablesorter-header {
+    background-image: url(/images/bg.gif);
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+	background-position: 0 5px;
+	@include rem-fallback(padding-top, $scale-0);
+	&:first-child {
+		background-position: -5px 5px;
+	}
+}
+th.tablesorter-headerDesc {
+	background-position: 0 8px;
+    background-image: url(/images/asc.gif);
+	&:first-child {
+		background-position: -5px 8px;
+	}
+}
+th.tablesorter-headerAsc {
+	background-position: 0 8px;
+    background-image: url(/images/desc.gif);
+	&:first-child {
+		background-position: -5px 8px;
+	}
+}
+tfoot th.tablesorter-headerAsc,
+tfoot th.tablesorter-headerDesc {
+	background-image: none;
+}
+
+.toggle-label,
+.table-toggle {
+	display: inline-block;
+}
+.table-toggle {
+	@include rem-fallback( margin-left, $scale-n2);
+}
+
+.table-fig legend {
+		float: none;
+		clear: both;
+		overflow: hidden;
+		display: block;
+	dt {
+	font-weight: bold;
+	clear: left;
+	&:after {
+		content:" :" ;
+		}
+	}
+	dt,dd {
+		float: left;
+	}
+	dd {
+		@include rem-fallback( margin-left, $scale-n3);
+		clear: right;
+	}
+}
+
+.graph-fig .datawrapper {
+	width: 100%;
+	@include rem-fallback(height, $scale-16);
+}
+
+legend + table {
+	float: none;
+	clear: both;
+}
+
+.js .sample-label,
+.hide-from-view {
+	display: none;
+	border-left: none;
+}
+
+
+/* @Layout
+-------------------------------------------------------------------------------*/
+
+body {
+	margin: 0 auto;
+	@include rem-fallback(max-width, 60.269);
+	@include rem-fallback(padding, $scale-0);
+}
+.module {
+	@include rem-fallback( margin-top, $scale-3);
+}
+.wide table {
+	width: 100%;
+}
+.inset, svg {
+	max-width: 100%;
+	img {
+		width: 100%;
+	}
+}
+svg g {
+	@include rem-fallback(font-size, $scale-n2);
+}
+[role="contentinfo"] {
+	max-width: 100%;
+}
+
+.site-footer {
+	@include rem-fallback( margin-top, $scale-4);
+	@include rem-fallback( border-top-width, $scale-n4);
+	border-top-style: solid;
+	@include rem-fallback( padding, 0, 0, $scale-0);
+}
+
+/* @Tools
+-------------------------------------------------------------------------------*/
+
+/* Hide visually but show in screen-readers etc. */
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+@import "socialcount-with-icons.min";
+
+.socialcount a {
+	border: none;
+}
+
+.collapsible-header {
+	cursor: pointer;
+}
+.collapsible-header::after {
+	content: " [-]";
+	@include rem-fallback( font-size, $scale-n1);
+	vertical-align: top;
+}
+.collapsible-collapsed .collapsible-header::after {
+	content: " [+]";
+}
+.collapsible-collapsed .collapsible-content {
+	display: none;
+}
+
+#emphasis-instructions {
+	display: none;
+	.collapsible-header {
+		margin-top: 0;
+		display: inline-block;
+	    color: $primary-darker;
+		font-weight: normal;
+	    transition: all 0.3s ease 0s;
+		&:hover,
+		&:focus {
+		    color: $text-base;
+		    outline: 0 none;
+		}
+		&:active {
+			background-color: $primary;
+		}
+	}
+}
+.social div.collapsible {
+	display: none;
+}
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Smaller Screens only */
+
+@media screen and (max-width: 49em) {
+
+
+/* Smaller Screens only @Tables
+-------------------------------------------------------------------------------*/
+
+	table .percentage {
+		margin-left: 0;
+		display: block;
+	}
+
+	.definition-table {
+		/* Force table to not be like tables anymore */
+			table, thead, tbody, th, td, tr {
+				display: block;
+				-moz-box-sizing: content-box;
+				box-sizing: content-box;
+			}
+			table {
+				min-width: 240px;
+			}
+			/* Hide table headers (but not display: none;, for accessibility) */
+			thead tr {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+			}
+
+			tbody th {
+				background-color: $primary-lighter;
+				@include rem-fallback( padding-left, $scale-n3);
+			}
+
+			td {
+				/* Behave  like a "row" */
+				border: none;
+				border-bottom: 1px solid $light-contrast;
+				position: relative;
+				padding-left: 50%;
+				@include rem-fallback( padding-bottom, $scale-1);
+			}
+
+			td:before {
+				/* Now like a table header */
+				position: absolute;
+				/* Top/left values mimic padding */
+				@include rem-fallback( left, $scale-n3);
+				width: 45%;
+				@include rem-fallback( padding-right, $scale-n3);
+			}
+
+			.table-notes {
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				width: 100%;
+				@include rem-fallback( padding, $scale-0, $scale-n3, $scale-1);
+				line-height: $scale-1;
+			}
+			.table-notes:before {
+				display: block;
+				position: static;
+			}
+
+			/*
+			Label the data
+			*/
+			td:nth-of-type(1):before { content: "Location"; }
+			td:nth-of-type(2):before { content: "Owner"; }
+			td:nth-of-type(3):before { content: "Claimed circulation 2012"; }
+			td:nth-of-type(4):before { content: "Claimed readership 2012"; }
+			td:nth-of-type(5):before { content: "Format 2012"; }
+			td:nth-of-type(6):before { content: "Target audience"; }
+			td:nth-of-type(7):before { content: "Notes"; }
+
+	}
+}
+
+/* Tiny Screens only */
+@media screen and (max-width: 27em) {
+
+/*  Tiny Screens only @Tables
+-------------------------------------------------------------------------------*/
+
+	.definition-table {
+		td:before {
+			@include rem-fallback( font-size, .75);
+		}
+	}
+}
+
+
+/* 40 em and up */
+@media screen and (min-width: 40em) {
+
+	/* 40em @Type
+	-------------------------------------------------------------------------------*/
+
+	.distinct {
+		@include rem-fallback(font-size, $scale-2);
+		@include rem-fallback(line-height, $scale-3);
+	}
+
+	[role="banner"] h1 {
+		display: inline-block;
+		float: left;
+		clear: left;
+	}
+
+	.title-page h1 {
+		@include rem-fallback( padding-top, $scale-1);
+	}
+
+	.lede {
+		@include rem-fallback( font-size, $scale-1);
+		@include rem-fallback( line-height, $scale-3);
+	}
+
+/*
+	ul, ol {
+		padding: 0;
+	}
+*/
+	.fig-list {
+		li {
+			float: none;
+			clear: both;
+			overflow: hidden;
+		}
+		strong {
+			display: inline;
+			@include rem-fallback( margin-right, - 7.5);
+			float: left;
+			clear: left;
+		}
+		span {
+			@include rem-fallback( margin-left, 7.5);
+			float: left;
+			clear: right;
+		}
+	}
+
+	/* 40em @Colours
+	-------------------------------------------------------------------------------*/
+
+	/* 40em @Navigation
+	-------------------------------------------------------------------------------*/
+
+	.nav-link {
+		float: right;
+		clear: right;
+ 		@include rem-fallback( margin-top, - $scale-1);
+	}
+	.prev-nav {
+		opacity: .9;
+	}
+
+	/* 40em @Forms
+	-------------------------------------------------------------------------------*/
+
+	#mc-embedded-subscribe-form {
+		clear: both;
+		overflow: hidden;
+		width: 66.666%;
+		input {
+			float: left;
+		}
+		input[type="email"] {
+			@include rem-fallback( margin, $scale-0, 0, 0);
+		    max-width: 75%;
+		}
+		input[type="submit"] {
+			@include rem-fallback( margin, $scale-0, 0, 0);
+			clear: right;
+			border-left: none;
+			max-width: 25%;
+		}
+	}
+
+	/* 40em @Tables
+	-------------------------------------------------------------------------------*/
+	tbody {
+		@include rem-fallback( line-height, $scale-1);
+	}
+	tbody th {
+
+		@include rem-fallback( font-size, $scale-n1);
+	}
+	th, td {
+
+		@include rem-fallback( padding, $scale-n1, $scale-0, $scale-0);
+	}
+
+	.definition-table tbody tr:hover th,
+	.definition-table tbody tr:hover td {
+		background-color: #fff4d8;
+	}
+
+/*
+	.table-fig legend {
+		dt,dd {
+			float: none;
+			clear: none;
+			display: inline-block;
+		}
+		dd + dt {
+			@include rem-fallback( margin-left, $scale-1);
+		}
+	}
+*/
+
+	th.tablesorter-header {
+    background-image: url(/images/bg.gif);
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+	background-position: 11px 5px;
+	@include rem-fallback(padding-top, $scale-0);
+	&:first-child {
+		background-position: -5px 5px;
+	}
+	}
+	th.tablesorter-headerDesc {
+		background-position: 11px 8px;
+	    background-image: url(/images/asc.gif);
+		&:first-child {
+			background-position: -5px 8px;
+		}
+	}
+	th.tablesorter-headerAsc {
+		background-position: 11px 8px;
+	    background-image: url(/images/desc.gif);
+		&:first-child {
+			background-position: -5px 8px;
+		}
+	}
+
+
+	/* 40em @Layout
+	-------------------------------------------------------------------------------*/
+
+	.site-header {
+		margin: 0 auto;
+		@include rem-fallback(max-width, 60.269);
+		clear: both;
+		overflow: hidden;
+		@include rem-fallback( padding-top, $scale-n1);
+	}
+	
+	.home + .social {
+		@include rem-fallback( margin-top, $scale-4);
+	}
+	
+	.read > p,
+	.read > ul,
+	.read > ol,
+	.read > blockquote {
+		max-width: 66.666%;
+		min-width: 33.333%;
+	}
+
+	.inset, svg {
+		float: right;
+		clear: right;
+		max-width: 66.666%;
+		min-width: 33.333%;
+		@include rem-fallback(margin, $scale-4, 0, $scale-4, $scale-4);
+		img {
+			width: 100%;
+		}
+	}
+
+}
+
+/* 75 em and up */
+@media screen and (min-width: 75em) {
+
+	/* 75em @Type
+	-------------------------------------------------------------------------------*/
+	
+	.title-page h1 {
+		@include rem-fallback( padding-top, $scale-7);
+	}
+	.lede {
+		width: 90%;
+		@include rem-fallback( font-size, $scale-2);
+		@include rem-fallback( line-height, $scale-3);
+	}
+
+	/* 75em @Tools
+	-------------------------------------------------------------------------------*/
+
+	#emphasis-instructions {
+		display: block;
+	}
+	
+}
