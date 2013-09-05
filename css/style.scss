@@ -620,7 +620,7 @@ tbody td {
 }
 
 th.tablesorter-header {
-    background-image: url(/images/bg.gif);
+    background-image: url(sceptical-climate/images/bg.gif);
     cursor: pointer;
     font-weight: bold;
     background-repeat: no-repeat;
@@ -632,14 +632,14 @@ th.tablesorter-header {
 }
 th.tablesorter-headerDesc {
 	background-position: 0 8px;
-    background-image: url(/images/asc.gif);
+    background-image: url(sceptical-climate/images/asc.gif);
 	&:first-child {
 		background-position: -5px 8px;
 	}
 }
 th.tablesorter-headerAsc {
 	background-position: 0 8px;
-    background-image: url(/images/desc.gif);
+    background-image: url(sceptical-climate/images/desc.gif);
 	&:first-child {
 		background-position: -5px 8px;
 	}
@@ -1000,7 +1000,7 @@ svg g {
 */
 
 	th.tablesorter-header {
-    background-image: url(/images/bg.gif);
+    background-image: url(sceptical-climate/images/bg.gif);
     cursor: pointer;
     font-weight: bold;
     background-repeat: no-repeat;
@@ -1012,14 +1012,14 @@ svg g {
 	}
 	th.tablesorter-headerDesc {
 		background-position: 11px 8px;
-	    background-image: url(/images/asc.gif);
+	    background-image: url(sceptical-climate/images/asc.gif);
 		&:first-child {
 			background-position: -5px 8px;
 		}
 	}
 	th.tablesorter-headerAsc {
 		background-position: 11px 8px;
-	    background-image: url(/images/desc.gif);
+	    background-image: url(sceptical-climate/images/desc.gif);
 		&:first-child {
 			background-position: -5px 8px;
 		}
