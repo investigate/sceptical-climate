@@ -478,7 +478,7 @@ nav ul, nav ol {
 	a {
 		display: block;
 		border-bottom: none;
-		@include rem-fallback(padding, $scale-n4, 0);
+		@include rem-fallback(padding, $scale-n2, 0);
 		&:hover, &:focus {
 			border-bottom: none;
 		}
@@ -1085,8 +1085,12 @@ svg g {
 		clear: right;
  		@include rem-fallback( margin-top, - $scale-1);
 	}
+	nav ul, nav ol {
+		a {
+			@include rem-fallback(padding, $scale-n4, 0);
+		}
+	}
 }
-
 /* 75 em and up */
 @media screen and (min-width: 75em) {
 
