@@ -255,6 +255,9 @@ body {
   line-height: 1.771rem;
   font-weight: normal; }
 
+ie7, ie8 {
+  font-family: sans-serif !important; }
+
 img.logo {
   display: block; }
 
