@@ -1135,6 +1135,7 @@ svg g {
   background: url("images/icon-sd6cd4d0ec7.png") no-repeat; }
 
 .icon-facebook {
+  margin: 1px 0 -1px;
   background-position: 0 0;
   height: 15px;
   width: 17px; }
@@ -1158,7 +1159,10 @@ svg g {
     -moz-background-size: auto 17px;
     -o-background-size: auto 17px;
     background-size: auto 17px;
-    background-image: url("images/icon-hd-s816aa7a6b3.png"); } }
+    background-image: url("images/icon-hd-s816aa7a6b3.png"); }
+
+  .icon-twitter {
+    margin: 8px 0 -8px; } }
 .socialcount a {
   border: none; }
 

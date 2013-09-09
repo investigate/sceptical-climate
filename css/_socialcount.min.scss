@@ -13,6 +13,7 @@
 }
 
 .icon-facebook {
+  margin: 1px 0 -1px;
   background-position: 0 0;
   height: 15px;
   width: 17px;
@@ -40,5 +41,8 @@
     -o-background-size: auto 17px;
     background-size: auto 17px;
     background-image: url('images/icon-hd-s816aa7a6b3.png');
+  }
+  .icon-twitter {
+    margin: 8px 0 -8px;
   }
 }
