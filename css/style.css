@@ -1286,12 +1286,6 @@ svg g {
   -------------------------------------------------------------------------------*/
   /* 40em @Navigation
   -------------------------------------------------------------------------------*/
-  .nav-link {
-    float: right;
-    clear: right;
-    margin-top: -23.344px;
-    margin-top: -1.459rem; }
-
   .prev-nav {
     opacity: .95; }
 
@@ -1398,6 +1392,13 @@ svg g {
     margin: 4.053rem 0rem 4.053rem 4.053rem; }
     .inset img, svg img {
       width: 100%; } }
+/* 58 em and up */
+@media screen and (min-width: 58em) {
+  .nav-link {
+    float: right;
+    clear: right;
+    margin-top: -23.344px;
+    margin-top: -1.459rem; } }
 /* 75 em and up */
 @media screen and (min-width: 75em) {
   /* 75em @Type

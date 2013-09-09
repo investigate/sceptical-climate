@@ -957,11 +957,6 @@ svg g {
 	/* 40em @Navigation
 	-------------------------------------------------------------------------------*/
 
-	.nav-link {
-		float: right;
-		clear: right;
- 		@include rem-fallback( margin-top, - $scale-1);
-	}
 	.prev-nav {
 		opacity: .95;
 	}
@@ -1081,6 +1076,15 @@ svg g {
 		}
 	}
 
+}
+
+/* 58 em and up */
+@media screen and (min-width: 58em) {
+	.nav-link {
+		float: right;
+		clear: right;
+ 		@include rem-fallback( margin-top, - $scale-1);
+	}
 }
 
 /* 75 em and up */
