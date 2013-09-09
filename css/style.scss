@@ -81,6 +81,7 @@ body {
 	text-rendering: optimizeLegibility;
 	@include rem-fallback(font-size, $scale-0);
 	@include rem-fallback(line-height, $scale-2);
+	font-weight: normal;
 }
 
 img.logo {
@@ -593,6 +594,9 @@ thead {
 	th {
 			vertical-align: bottom;
 	}
+}
+th { 
+	text-align: left;
 }
 th, td {
 	@include rem-fallback( padding, $scale-n2, $scale-n3, $scale-n1);

@@ -252,7 +252,8 @@ body {
   font-size: 17px;
   font-size: 1.0625rem;
   line-height: 28.336px;
-  line-height: 1.771rem; }
+  line-height: 1.771rem;
+  font-weight: normal; }
 
 img.logo {
   display: block; }
@@ -755,6 +756,9 @@ thead {
   border-bottom: 1px #eee solid; }
   thead th {
     vertical-align: bottom; }
+
+th {
+  text-align: left; }
 
 th, td {
   padding: 10.192px 6.112px 14px;
