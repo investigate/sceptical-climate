@@ -700,8 +700,8 @@ input, textarea {
   border-width: 1px;
   border-width: 0.0625rem;
   border-style: solid;
-  padding: 10.192px 6.112px;
-  padding: 0.637rem 0.382rem;
+  padding: 14px 6.112px;
+  padding: 0.875rem 0.382rem;
   font-family: "open sans", verdana, helvetica, arial, sans-serif;
   letter-spacing: 0.0625;
   vertical-align: middle; }
@@ -717,6 +717,9 @@ input, textarea {
 #mc-embedded-subscribe-form {
   font-size: 14px;
   font-size: 0.875rem; }
+  #mc-embedded-subscribe-form p {
+    line-height: 23.344px;
+    line-height: 1.459rem; }
   #mc-embedded-subscribe-form h2 {
     margin-top: 6.112px;
     margin-top: 0.382rem;
@@ -727,11 +730,13 @@ input, textarea {
     margin: 17px 0px 0px;
     margin: 1.0625rem 0rem 0rem;
     margin-bottom: 0;
-    border-radius: 0; }
+    border-radius: 0;
+    border-bottom-width: 0; }
   #mc-embedded-subscribe-form input[type="submit"] {
     margin-top: 0;
     -webkit-appearance: none;
-    border-radius: 0; }
+    border-radius: 0;
+    border-top-width: 0; }
 
 label {
   margin: 17px 0px 0px;
@@ -1343,11 +1348,16 @@ svg g {
     #mc-embedded-subscribe-form input[type="email"] {
       margin: 17px 0px 0px;
       margin: 1.0625rem 0rem 0rem;
-      max-width: 75%; }
+      max-width: 75%;
+      border-right-width: 0;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.0625rem; }
     #mc-embedded-subscribe-form input[type="submit"] {
       margin: 17px 0px 0px;
       margin: 1.0625rem 0rem 0rem;
       clear: right;
+      border-top-width: 1px;
+      border-top-width: 0.0625rem;
       border-left: none;
       max-width: 25%; }
 
