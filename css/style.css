@@ -258,6 +258,10 @@ body {
 img.logo {
   display: block; }
 
+.ie7,
+.ie6 {
+  font-family: sans-serif !important; }
+
 h1 {
   margin-top: 17px;
   margin-top: 1.0625rem;

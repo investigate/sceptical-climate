@@ -86,7 +86,10 @@ body {
 img.logo {
 	display: block;
 }
-
+.ie7,
+.ie6 {
+	font-family: sans-serif !important;
+}
 h1 {
 	@include rem-fallback(margin-top, $scale-0);
 	@include rem-fallback(font-size, $scale-1);
