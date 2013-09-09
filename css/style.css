@@ -728,7 +728,8 @@ input, textarea {
     margin: 1.0625rem 0rem 0rem;
     margin-bottom: 0; }
   #mc-embedded-subscribe-form input[type="submit"] {
-    margin-top: 0; }
+    margin-top: 0;
+    -webkit-appearance: none; }
 
 label {
   margin: 17px 0px 0px;
