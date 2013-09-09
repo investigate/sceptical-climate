@@ -101,6 +101,10 @@ pre {
   word-wrap: break-word;
   /* IE */ }
 
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
 input[type="radio"] {
   vertical-align: text-bottom; }
 
@@ -247,23 +251,28 @@ button {
 /* @Type
 -------------------------------------------------------------------------------*/
 body {
-  font-family: "open sans", verdana, sans-serif;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 17px;
   font-size: 1.0625rem;
   line-height: 28.336px;
-  line-height: 1.771rem; }
+  line-height: 1.771rem;
+  font-weight: normal; }
 
 img.logo {
   display: block; }
 
+.ie7,
+.ie6 {
+  font-family: sans-serif !important; }
+
 h1 {
   margin-top: 17px;
   margin-top: 1.0625rem;
-  font-size: 38.912px;
-  font-size: 2.432rem;
-  line-height: 64.848px;
-  line-height: 4.053rem;
+  font-size: 23.344px;
+  font-size: 1.459rem;
+  line-height: 28.336px;
+  line-height: 1.771rem;
   font-weight: bold; }
 
 [role="banner"] h1 {
@@ -277,8 +286,12 @@ h1 {
 .title-page h1 .report-name {
   display: block;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
-  letter-spacing: 0.1rem;
+  font-size: 28.336px;
+  font-size: 1.771rem;
+  line-height: 38.912px;
+  line-height: 2.432rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   font-weight: 900; }
 
 .report-title,
@@ -619,6 +632,15 @@ kbd {
   border-radius: 2px;
   box-shadow: 0px 2px 1px #555; }
 
+.socialcount .facebook {
+  background-color: #3b5998; }
+
+.socialcount .twitter {
+  background-color: #0084B4; }
+
+.socialcount .googleplus {
+  background-color: #d14836; }
+
 /* @Navigation
 -------------------------------------------------------------------------------*/
 nav ul, nav ol {
@@ -630,8 +652,8 @@ nav ul, nav ol {
   nav ul a, nav ol a {
     display: block;
     border-bottom: none;
-    padding: 5.04px 0px;
-    padding: 0.315rem 0rem; }
+    padding: 10.192px 0px;
+    padding: 0.637rem 0rem; }
     nav ul a:hover, nav ul a:focus, nav ol a:hover, nav ol a:focus {
       border-bottom: none; }
   nav ul ol, nav ul ul, nav ol ol, nav ol ul {
@@ -678,14 +700,16 @@ input, textarea {
   border-width: 1px;
   border-width: 0.0625rem;
   border-style: solid;
-  padding: 10.192px 6.112px;
-  padding: 0.637rem 0.382rem;
-  font-family: "open sans", verdana, sans-serif;
+  padding: 14px 6.112px;
+  padding: 0.875rem 0.382rem;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   letter-spacing: 0.0625;
   vertical-align: middle; }
 
 .module.newsletter-form {
   background-color: #eeeeee;
+  margin-top: 78.752px;
+  margin-top: 4.922rem;
   padding: 17px 17px 28.336px;
   padding: 1.0625rem 1.0625rem 1.771rem;
   border: 1px solid #e1e1e1; }
@@ -693,6 +717,9 @@ input, textarea {
 #mc-embedded-subscribe-form {
   font-size: 14px;
   font-size: 0.875rem; }
+  #mc-embedded-subscribe-form p {
+    line-height: 23.344px;
+    line-height: 1.459rem; }
   #mc-embedded-subscribe-form h2 {
     margin-top: 6.112px;
     margin-top: 0.382rem;
@@ -702,9 +729,14 @@ input, textarea {
   #mc-embedded-subscribe-form input[type="email"] {
     margin: 17px 0px 0px;
     margin: 1.0625rem 0rem 0rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom-width: 0; }
   #mc-embedded-subscribe-form input[type="submit"] {
-    margin-top: 0; }
+    margin-top: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border-top-width: 0; }
 
 label {
   margin: 17px 0px 0px;
@@ -740,6 +772,9 @@ thead {
   border-bottom: 1px #eee solid; }
   thead th {
     vertical-align: bottom; }
+
+th {
+  text-align: left; }
 
 th, td {
   padding: 10.192px 6.112px 14px;
@@ -890,7 +925,7 @@ svg g {
   padding: 0;
   border: 0; }
 
-/* SocialCount - v0.1.6 - 2013-08-08
+/*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */
 .socialcount {
@@ -900,9 +935,6 @@ svg g {
 
 .socialcount > li {
   background-color: #999; }
-
-.socialcount > li, .socialcount > li > a:focus, .socialcount .loading {
-  border-radius: 0; }
 
 .socialcount > li > a:focus, .socialcount > li:hover, .socialcount > li.hover {
   background-color: #464646; }
@@ -1046,7 +1078,7 @@ svg g {
   margin: 0 3px;
   background: #fff;
   opacity: 0;
-  border-radius: 0;
+  border-radius: 50%;
   -webkit-animation: socialCountLoadingFade .6s infinite;
   -moz-animation: socialCountLoadingFade .6s infinite;
   animation: socialCountLoadingFade .6s infinite; }
@@ -1096,6 +1128,37 @@ svg g {
   100% {
     opacity: 0; } }
 
+.social-icon {
+  display: inline-block; }
+
+.icon-facebook, .icon-googleplus, .icon-twitter {
+  background: url("images/icon-sd6cd4d0ec7.png") no-repeat; }
+
+.icon-facebook {
+  background-position: 0 0;
+  height: 15px;
+  width: 17px; }
+
+.icon-googleplus {
+  margin: 6px 0 -6px;
+  background-position: -21px 0;
+  height: 20px;
+  width: 20px; }
+
+.icon-twitter {
+  margin: 6px 0 -6px;
+  background-position: -84px 0;
+  height: 20px;
+  width: 17px; }
+
+/* HD icons */
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .social-icon {
+    -webkit-background-size: auto 17px;
+    -moz-background-size: auto 17px;
+    -o-background-size: auto 17px;
+    background-size: auto 17px;
+    background-image: url("images/icon-hd-s816aa7a6b3.png"); } }
 .socialcount a {
   border: none; }
 
@@ -1210,7 +1273,7 @@ svg g {
     font-size: 12px;
     font-size: 0.75rem; } }
 /* 40 em and up */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 42em) {
   /* 40em @Type
   -------------------------------------------------------------------------------*/
   .distinct {
@@ -1223,6 +1286,18 @@ svg g {
     display: inline-block;
     float: left;
     clear: left; }
+
+  h1 {
+    font-size: 38.912px;
+    font-size: 2.432rem;
+    line-height: 64.848px;
+    line-height: 4.053rem; }
+
+  .title-page h1 .report-name {
+    font-size: 38.912px;
+    font-size: 2.432rem;
+    line-height: 64.848px;
+    line-height: 4.053rem; }
 
   .title-page h1 {
     padding-top: 23.344px;
@@ -1259,14 +1334,8 @@ svg g {
   -------------------------------------------------------------------------------*/
   /* 40em @Navigation
   -------------------------------------------------------------------------------*/
-  .nav-link {
-    float: right;
-    clear: right;
-    margin-top: -23.344px;
-    margin-top: -1.459rem; }
-
   .prev-nav {
-    opacity: .9; }
+    opacity: .95; }
 
   /* 40em @Forms
   -------------------------------------------------------------------------------*/
@@ -1279,11 +1348,16 @@ svg g {
     #mc-embedded-subscribe-form input[type="email"] {
       margin: 17px 0px 0px;
       margin: 1.0625rem 0rem 0rem;
-      max-width: 75%; }
+      max-width: 75%;
+      border-right-width: 0;
+      border-bottom-width: 1px;
+      border-bottom-width: 0.0625rem; }
     #mc-embedded-subscribe-form input[type="submit"] {
       margin: 17px 0px 0px;
       margin: 1.0625rem 0rem 0rem;
       clear: right;
+      border-top-width: 1px;
+      border-top-width: 0.0625rem;
       border-left: none;
       max-width: 25%; }
 
@@ -1371,6 +1445,17 @@ svg g {
     margin: 4.053rem 0rem 4.053rem 4.053rem; }
     .inset img, svg img {
       width: 100%; } }
+/* 58 em and up */
+@media screen and (min-width: 58em) {
+  .nav-link {
+    float: right;
+    clear: right;
+    margin-top: -23.344px;
+    margin-top: -1.459rem; }
+
+  nav ul a, nav ol a {
+    padding: 5.04px 0px;
+    padding: 0.315rem 0rem; } }
 /* 75 em and up */
 @media screen and (min-width: 75em) {
   /* 75em @Type
