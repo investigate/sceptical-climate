@@ -463,6 +463,10 @@ kbd {
 	box-shadow: 0px 2px 1px #555;
 }
 
+.socialcount .facebook { background-color: #3b5998;}
+.socialcount .twitter { background-color: #0084B4;}
+.socialcount .googleplus { background-color: #d14836;}
+
 /* @Navigation
 -------------------------------------------------------------------------------*/
 
@@ -533,6 +537,7 @@ input, textarea {
 
 .module.newsletter-form {
 	background-color: $light-contrast;
+	@include rem-fallback(margin-top, $scale-5);
 	@include rem-fallback(padding, $scale-0, $scale-0, $scale-2);
 	border: 1px solid darken($light-contrast, 5%);
 }

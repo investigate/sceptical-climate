@@ -623,6 +623,15 @@ kbd {
   border-radius: 2px;
   box-shadow: 0px 2px 1px #555; }
 
+.socialcount .facebook {
+  background-color: #3b5998; }
+
+.socialcount .twitter {
+  background-color: #0084B4; }
+
+.socialcount .googleplus {
+  background-color: #d14836; }
+
 /* @Navigation
 -------------------------------------------------------------------------------*/
 nav ul, nav ol {
@@ -690,6 +699,8 @@ input, textarea {
 
 .module.newsletter-form {
   background-color: #eeeeee;
+  margin-top: 78.752px;
+  margin-top: 4.922rem;
   padding: 17px 17px 28.336px;
   padding: 1.0625rem 1.0625rem 1.771rem;
   border: 1px solid #e1e1e1; }
@@ -894,7 +905,7 @@ svg g {
   padding: 0;
   border: 0; }
 
-/*! SocialCount - v0.1.6 - 2013-08-08
+/* SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */
 .socialcount {
