@@ -726,10 +726,12 @@ input, textarea {
   #mc-embedded-subscribe-form input[type="email"] {
     margin: 17px 0px 0px;
     margin: 1.0625rem 0rem 0rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    border-radius: 0; }
   #mc-embedded-subscribe-form input[type="submit"] {
     margin-top: 0;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    border-radius: 0; }
 
 label {
   margin: 17px 0px 0px;
