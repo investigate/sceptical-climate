@@ -61,6 +61,12 @@
 
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.2"></script>
+        <!-- Fallback if CDN fails -->
+        <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape('%3Cscript type="text/javascript" src="{{ site.url }}/js/jquery.min.js"%3E%3C/script%3E'));
+        }
+        </script>
 
 	</head>
 
