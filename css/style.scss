@@ -532,7 +532,7 @@ input, textarea {
 	width: 100%;
 	@include rem-fallback(border-width, $scale-n5);
 	border-style: solid;
-	@include rem-fallback(padding, $scale-n2, $scale-n3);
+	@include rem-fallback(padding, $scale-n1, $scale-n3);
 	font-family: $sans-stack;
 	letter-spacing: $scale-n5;
 	vertical-align: middle;
@@ -547,6 +547,9 @@ input, textarea {
 
 #mc-embedded-subscribe-form {
 	@include rem-fallback(font-size, $scale-n1);
+	p {
+		@include rem-fallback( line-height, $scale-1);
+	}
 	h2 {
 		@include rem-fallback(margin-top, $scale-n3);
 		padding-top: 0;
@@ -556,11 +559,13 @@ input, textarea {
 		@include rem-fallback(margin, $scale-0, 0, 0);
 		margin-bottom: 0;
 		border-radius: 0;
+		border-bottom-width: 0;
 	}
 	input[type="submit"] {
 		margin-top: 0;
 		-webkit-appearance: none;
 		border-radius: 0;
+		border-top-width: 0;
 	}
 }
 
@@ -983,10 +988,13 @@ svg g {
 		input[type="email"] {
 			@include rem-fallback( margin, $scale-0, 0, 0);
 		    max-width: 75%;
+		    border-right-width: 0;
+		    @include rem-fallback( border-bottom-width, $scale-n5);
 		}
 		input[type="submit"] {
 			@include rem-fallback( margin, $scale-0, 0, 0);
 			clear: right;
+		    @include rem-fallback( border-top-width, $scale-n5);
 			border-left: none;
 			max-width: 25%;
 		}
