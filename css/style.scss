@@ -83,9 +83,6 @@ body {
 	@include rem-fallback(line-height, $scale-2);
 	font-weight: normal;
 }
-ie7, ie8 {
-	font-family: sans-serif !important;
-}
 img.logo {
 	display: block;
 }
