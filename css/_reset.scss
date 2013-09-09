@@ -67,7 +67,10 @@ pre {
 	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
 	word-wrap: break-word; /* IE */
 }
-
+input::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; 
+}
 input[type="radio"] {vertical-align: text-bottom;}
 input[type="checkbox"] {vertical-align: bottom;}
 .ie7 input[type="checkbox"] {vertical-align: baseline;}
