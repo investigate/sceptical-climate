@@ -260,10 +260,10 @@ img.logo {
 h1 {
   margin-top: 17px;
   margin-top: 1.0625rem;
-  font-size: 38.912px;
-  font-size: 2.432rem;
-  line-height: 64.848px;
-  line-height: 4.053rem;
+  font-size: 23.344px;
+  font-size: 1.459rem;
+  line-height: 28.336px;
+  line-height: 1.771rem;
   font-weight: bold; }
 
 [role="banner"] h1 {
@@ -277,8 +277,12 @@ h1 {
 .title-page h1 .report-name {
   display: block;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
-  letter-spacing: 0.1rem;
+  font-size: 28.336px;
+  font-size: 1.771rem;
+  line-height: 38.912px;
+  line-height: 2.432rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   font-weight: 900; }
 
 .report-title,
@@ -890,7 +894,7 @@ svg g {
   padding: 0;
   border: 0; }
 
-/* SocialCount - v0.1.6 - 2013-08-08
+/*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */
 .socialcount {
@@ -1210,7 +1214,7 @@ svg g {
     font-size: 12px;
     font-size: 0.75rem; } }
 /* 40 em and up */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 42em) {
   /* 40em @Type
   -------------------------------------------------------------------------------*/
   .distinct {
@@ -1223,6 +1227,18 @@ svg g {
     display: inline-block;
     float: left;
     clear: left; }
+
+  h1 {
+    font-size: 38.912px;
+    font-size: 2.432rem;
+    line-height: 64.848px;
+    line-height: 4.053rem; }
+
+  .title-page h1 .report-name {
+    font-size: 38.912px;
+    font-size: 2.432rem;
+    line-height: 64.848px;
+    line-height: 4.053rem; }
 
   .title-page h1 {
     padding-top: 23.344px;

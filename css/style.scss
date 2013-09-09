@@ -87,10 +87,10 @@ img.logo {
 	display: block;
 }
 
- h1 {
+h1 {
 	@include rem-fallback(margin-top, $scale-0);
-	@include rem-fallback(font-size, $scale-3);
-	@include rem-fallback(line-height, $scale-4);
+	@include rem-fallback(font-size, $scale-1);
+	@include rem-fallback(line-height, $scale-2);
 	font-weight: bold;
 }
 
@@ -104,7 +104,9 @@ img.logo {
 		.report-name {
 			display: block;
 			text-transform: uppercase;
-			@include rem-fallback( letter-spacing, 0.1);
+			@include rem-fallback(font-size, $scale-2);
+			@include rem-fallback(line-height, $scale-3);
+			@include rem-fallback( letter-spacing, $scale-n5);
 			font-weight: 900;
 		}
 	}
@@ -881,7 +883,7 @@ svg g {
 
 
 /* 40 em and up */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 42em) {
 
 	/* 40em @Type
 	-------------------------------------------------------------------------------*/
@@ -895,6 +897,20 @@ svg g {
 		display: inline-block;
 		float: left;
 		clear: left;
+	}
+
+	h1 {
+		@include rem-fallback(font-size, $scale-3);
+		@include rem-fallback(line-height, $scale-4);
+	}
+
+	.title-page {
+		h1 {
+			.report-name {
+				@include rem-fallback(font-size, $scale-3);
+				@include rem-fallback(line-height, $scale-4);
+			}
+		}
 	}
 
 	.title-page h1 {
@@ -1036,11 +1052,11 @@ svg g {
 		overflow: hidden;
 		@include rem-fallback( padding-top, $scale-n1);
 	}
-	
+
 	.home + .social {
 		@include rem-fallback( margin-top, $scale-4);
 	}
-	
+
 	.read > p,
 	.read > ul,
 	.read > ol,
@@ -1067,7 +1083,7 @@ svg g {
 
 	/* 75em @Type
 	-------------------------------------------------------------------------------*/
-	
+
 	.title-page h1 {
 		@include rem-fallback( padding-top, $scale-7);
 	}
@@ -1083,5 +1099,5 @@ svg g {
 	#emphasis-instructions {
 		display: block;
 	}
-	
+
 }
