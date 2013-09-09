@@ -247,7 +247,7 @@ button {
 /* @Type
 -------------------------------------------------------------------------------*/
 body {
-  font-family: "open sans", verdana, sans-serif;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 17px;
   font-size: 1.0625rem;
@@ -694,7 +694,7 @@ input, textarea {
   border-style: solid;
   padding: 10.192px 6.112px;
   padding: 0.637rem 0.382rem;
-  font-family: "open sans", verdana, sans-serif;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   letter-spacing: 0.0625;
   vertical-align: middle; }
 
