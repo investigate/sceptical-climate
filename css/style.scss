@@ -537,6 +537,7 @@ input, textarea {
 
 .module.newsletter-form {
 	background-color: $light-contrast;
+	@include rem-fallback(margin-top, $scale-5);
 	@include rem-fallback(padding, $scale-0, $scale-0, $scale-2);
 	border: 1px solid darken($light-contrast, 5%);
 }
