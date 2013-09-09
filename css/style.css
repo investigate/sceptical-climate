@@ -247,12 +247,13 @@ button {
 /* @Type
 -------------------------------------------------------------------------------*/
 body {
-  font-family: "open sans", verdana, sans-serif;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 17px;
   font-size: 1.0625rem;
   line-height: 28.336px;
-  line-height: 1.771rem; }
+  line-height: 1.771rem;
+  font-weight: normal; }
 
 img.logo {
   display: block; }
@@ -643,8 +644,8 @@ nav ul, nav ol {
   nav ul a, nav ol a {
     display: block;
     border-bottom: none;
-    padding: 5.04px 0px;
-    padding: 0.315rem 0rem; }
+    padding: 10.192px 0px;
+    padding: 0.637rem 0rem; }
     nav ul a:hover, nav ul a:focus, nav ol a:hover, nav ol a:focus {
       border-bottom: none; }
   nav ul ol, nav ul ul, nav ol ol, nav ol ul {
@@ -693,7 +694,7 @@ input, textarea {
   border-style: solid;
   padding: 10.192px 6.112px;
   padding: 0.637rem 0.382rem;
-  font-family: "open sans", verdana, sans-serif;
+  font-family: "open sans", verdana, helvetica, arial, sans-serif;
   letter-spacing: 0.0625;
   vertical-align: middle; }
 
@@ -755,6 +756,9 @@ thead {
   border-bottom: 1px #eee solid; }
   thead th {
     vertical-align: bottom; }
+
+th {
+  text-align: left; }
 
 th, td {
   padding: 10.192px 6.112px 14px;
@@ -916,9 +920,6 @@ svg g {
 .socialcount > li {
   background-color: #999; }
 
-.socialcount > li, .socialcount > li > a:focus, .socialcount .loading {
-  border-radius: 0; }
-
 .socialcount > li > a:focus, .socialcount > li:hover, .socialcount > li.hover {
   background-color: #464646; }
 
@@ -1061,7 +1062,6 @@ svg g {
   margin: 0 3px;
   background: #fff;
   opacity: 0;
-  border-radius: 0;
   -webkit-animation: socialCountLoadingFade .6s infinite;
   -moz-animation: socialCountLoadingFade .6s infinite;
   animation: socialCountLoadingFade .6s infinite; }
@@ -1286,14 +1286,8 @@ svg g {
   -------------------------------------------------------------------------------*/
   /* 40em @Navigation
   -------------------------------------------------------------------------------*/
-  .nav-link {
-    float: right;
-    clear: right;
-    margin-top: -23.344px;
-    margin-top: -1.459rem; }
-
   .prev-nav {
-    opacity: .9; }
+    opacity: .95; }
 
   /* 40em @Forms
   -------------------------------------------------------------------------------*/
@@ -1398,6 +1392,17 @@ svg g {
     margin: 4.053rem 0rem 4.053rem 4.053rem; }
     .inset img, svg img {
       width: 100%; } }
+/* 58 em and up */
+@media screen and (min-width: 58em) {
+  .nav-link {
+    float: right;
+    clear: right;
+    margin-top: -23.344px;
+    margin-top: -1.459rem; }
+
+  nav ul a, nav ol a {
+    padding: 5.04px 0px;
+    padding: 0.315rem 0rem; } }
 /* 75 em and up */
 @media screen and (min-width: 75em) {
   /* 75em @Type

@@ -73,7 +73,7 @@ $scale-17	: 38.008;		/* 17 	38.008rem   608.132px   */
 /* @Type
 -------------------------------------------------------------------------------*/
 
-$sans-stack: "open sans", verdana, sans-serif ;
+$sans-stack: "open sans", verdana, helvetica, arial, sans-serif ;
 $serif-stack: georgia;
 
 body {
@@ -81,8 +81,8 @@ body {
 	text-rendering: optimizeLegibility;
 	@include rem-fallback(font-size, $scale-0);
 	@include rem-fallback(line-height, $scale-2);
+	font-weight: normal;
 }
-
 img.logo {
 	display: block;
 }
@@ -478,7 +478,7 @@ nav ul, nav ol {
 	a {
 		display: block;
 		border-bottom: none;
-		@include rem-fallback(padding, $scale-n4, 0);
+		@include rem-fallback(padding, $scale-n2, 0);
 		&:hover, &:focus {
 			border-bottom: none;
 		}
@@ -593,6 +593,9 @@ thead {
 	th {
 			vertical-align: bottom;
 	}
+}
+th { 
+	text-align: left;
 }
 th, td {
 	@include rem-fallback( padding, $scale-n2, $scale-n3, $scale-n1);
@@ -748,7 +751,7 @@ svg g {
   margin: -1px; padding: 0; border: 0;
 }
 
-@import "socialcount-with-icons.min";
+@import "socialcount.min";
 
 .socialcount a {
 	border: none;
@@ -957,13 +960,8 @@ svg g {
 	/* 40em @Navigation
 	-------------------------------------------------------------------------------*/
 
-	.nav-link {
-		float: right;
-		clear: right;
- 		@include rem-fallback( margin-top, - $scale-1);
-	}
 	.prev-nav {
-		opacity: .9;
+		opacity: .95;
 	}
 
 	/* 40em @Forms
@@ -1083,6 +1081,19 @@ svg g {
 
 }
 
+/* 58 em and up */
+@media screen and (min-width: 58em) {
+	.nav-link {
+		float: right;
+		clear: right;
+ 		@include rem-fallback( margin-top, - $scale-1);
+	}
+	nav ul, nav ol {
+		a {
+			@include rem-fallback(padding, $scale-n4, 0);
+		}
+	}
+}
 /* 75 em and up */
 @media screen and (min-width: 75em) {
 
