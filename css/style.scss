@@ -736,6 +736,10 @@ body {
 		width: 100%;
 	}
 }
+.small-fig {
+    @include rem-fallback( margin-top, $scale-1);
+    max-width: 50%;
+} 
 svg g {
 	@include rem-fallback(font-size, $scale-n2);
 }
