@@ -189,7 +189,7 @@ button {
 .clearfix {
   zoom: 1; }
 
-/* Natural box layout */
+/* natural box layout */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -199,7 +199,7 @@ button {
   position: absolute;
   top: 0; }
 
-/* @Webfonts
+/* @webfonts
 -------------------------------------------------------------------------------*/
 @font-face {
   font-family: 'Open Sans';
@@ -225,11 +225,12 @@ button {
   font-weight: 700;
   src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff) format("woff"); }
 
-/* @Type-scale
+/* @type-scale
 -------------------------------------------------------------------------------*/
-/* Modular Scale
+/* modular scale
+
 	http://modularscale.com/scale/?px1=17&px2=14&ra1=1.667&ra2=0
-	---------------------
+
 	17px @ 1:1.667
 	14px @ 1:1.667
 */
@@ -248,8 +249,11 @@ button {
 /* 7    6.757rem    108.110px	*/
 /* 16	31.301rem	500.808px	*/
 /* 17 	38.008rem   608.132px   */
-/* @Type
+/* @type
 -------------------------------------------------------------------------------*/
+* {
+  -webkit-text-size-adjust: none; }
+
 body {
   font-family: "open sans", verdana, helvetica, arial, sans-serif;
   text-rendering: optimizeLegibility;
@@ -313,6 +317,9 @@ h1 {
   font-style: italic;
   line-height: 23.344px;
   line-height: 1.459rem; }
+
+.lede {
+  font-style: italic; }
 
 .distinct {
   font-size: 28.336px;
@@ -423,6 +430,30 @@ h5 {
   padding: 1.0625rem 0rem 0rem 0rem;
   font-weight: bold; }
 
+h6 {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  margin: 28.336px 0px 0px 0px;
+  margin: 1.771rem 0rem 0rem 0rem;
+  padding: 17px 0px 0px 0px;
+  padding: 1.0625rem 0rem 0rem 0rem;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: underline; }
+
+.subsection h6 {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  margin: 28.336px 0px 0px 0px;
+  margin: 1.771rem 0rem 0rem 0rem;
+  padding: 17px 0px 0px 0px;
+  padding: 1.0625rem 0rem 0rem 0rem;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: underline; }
+
 p, ul, ol, dl, figure {
   margin: 23.344px 0px 0px;
   margin: 1.459rem 0rem 0rem; }
@@ -494,20 +525,20 @@ a.license-viz {
 .fig-list strong {
   display: block; }
 
-/* @Colours
+/* @colours
 -------------------------------------------------------------------------------*/
-/* Remove text-shadow from section */
+/* remove text-shadow from section */
 ::-moz-selection {
   background: #d6e9ef;
-  color: #666666;
+  color: #000;
   text-shadow: none; }
 
 ::selection {
   background: #d6e9ef;
-  color: #666666;
+  color: #000;
   text-shadow: none; }
 
-/*  Set touch-screen highlight colour */
+/*  set touch-screen highlight colour */
 a:link {
   -webkit-tap-highlight-color: #d6e9ef; }
 
@@ -547,7 +578,8 @@ a {
     color: #333333;
     outline: 0 none; }
   a:active {
-    background-color: #add3de; }
+    background-color: #add3de;
+    color: #0072a2; }
 
 h2.breadcrumb a {
   color: #333333; }
@@ -586,6 +618,15 @@ blockquote {
 .reference-list a strong {
   color: #333333; }
 
+.reference-list cite:target {
+  background-color: #fff0b3; }
+.reference-list cite:hover:after {
+  content: "#" attr(id);
+  display: inline-block;
+  padding-left: 1em;
+  color: #888;
+  text-transform: none; }
+
 th {
   color: black; }
 
@@ -593,11 +634,6 @@ thead th.tablesorter-headerDesc,
 thead th.tablesorter-headerAsc {
   background-color: #d6e9ef; }
 
-/*
-tbody tr:nth-of-type(odd) {
-  background: lighten($primary, 20%);
-}
-*/
 .full-credits dt {
   color: #0072a2; }
 
@@ -641,7 +677,7 @@ kbd {
 .socialcount .googleplus {
   background-color: #d14836; }
 
-/* @Navigation
+/* @navigation
 -------------------------------------------------------------------------------*/
 nav ul, nav ol {
   list-style-type: none;
@@ -685,9 +721,9 @@ nav ul, nav ol {
   margin-top: 38.912px;
   margin-top: 2.432rem; }
 
-/* @Forms
+/* @forms
 -------------------------------------------------------------------------------*/
-/* Toggled State */
+/* toggled state */
 fieldset,
 label,
 input {
@@ -796,9 +832,6 @@ tbody td {
 tbody th {
   font-weight: normal; }
 
-tbody td {
-  /* 	width: 10em; */ }
-
 :not(.definition-table) tbody tr:hover th,
 :not(.definition-table) tbody tr:hover td {
   background-color: #fff4d8; }
@@ -875,7 +908,7 @@ legend + table {
   display: none;
   border-left: none; }
 
-/* @Layout
+/* @layout
 -------------------------------------------------------------------------------*/
 body {
   margin: 0 auto;
@@ -912,9 +945,9 @@ svg g {
   padding: 0px 0px 17px;
   padding: 0rem 0rem 1.0625rem; }
 
-/* @Tools
+/* @tools
 -------------------------------------------------------------------------------*/
-/* Hide visually but show in screen-readers etc. */
+/* hide visually but show in screen-readers etc. */
 .visuallyhidden {
   position: absolute;
   overflow: hidden;
@@ -1198,22 +1231,27 @@ svg g {
 .social div.collapsible {
   display: none; }
 
-/* Media queries!
+/* media queries
 -------------------------------------------------------------------------------*/
-/* Smaller Screens only */
+/* tiny Screens only */
+@media screen and (max-width: 27em) {
+  /*  tiny Screens only @tables
+  -------------------------------------------------------------------------------*/
+  .definition-table td:before {
+    font-size: 12px;
+    font-size: 0.75rem; } }
+/* smaller Screens only */
 @media screen and (max-width: 49em) {
-  /* Smaller Screens only @Tables
+  /* smaller Screens only @tables
   -------------------------------------------------------------------------------*/
   table .percentage {
     margin-left: 0;
     display: block; }
 
   .definition-table {
-    /* Force table to not be like tables anymore */
-    /* Hide table headers (but not display: none;, for accessibility) */
-    /*
-    Label the data
-    */ }
+    /* force table to not be like tables anymore */
+    /* hide table headers (but not display: none; for accessibility) */
+    /* label the data */ }
     .definition-table table, .definition-table thead, .definition-table tbody, .definition-table th, .definition-table td, .definition-table tr {
       display: block;
       -moz-box-sizing: content-box;
@@ -1229,7 +1267,7 @@ svg g {
       padding-left: 6.112px;
       padding-left: 0.382rem; }
     .definition-table td {
-      /* Behave  like a "row" */
+      /* behave  like a row */
       border: none;
       border-bottom: 1px solid #eeeeee;
       position: relative;
@@ -1237,9 +1275,9 @@ svg g {
       padding-bottom: 23.344px;
       padding-bottom: 1.459rem; }
     .definition-table td:before {
-      /* Now like a table header */
+      /* now like a table header */
       position: absolute;
-      /* Top/left values mimic padding */
+      /* top/left values mimic padding */
       left: 6.112px;
       left: 0.382rem;
       width: 45%;
@@ -1269,16 +1307,26 @@ svg g {
       content: "Target audience"; }
     .definition-table td:nth-of-type(7):before {
       content: "Notes"; } }
-/* Tiny Screens only */
-@media screen and (max-width: 27em) {
-  /*  Tiny Screens only @Tables
+/* 36em and up
+-------------------------------------------------------------------------------*/
+@media screen and (min-width: 36em) {
+  /* 36em @type
   -------------------------------------------------------------------------------*/
-  .definition-table td:before {
-    font-size: 12px;
-    font-size: 0.75rem; } }
-/* 40 em and up */
-@media screen and (min-width: 42em) {
-  /* 40em @Type
+  .lede {
+    font-size: 23.344px;
+    font-size: 1.459rem;
+    line-height: 38.912px;
+    line-height: 2.432rem;
+    font-style: normal; }
+
+  /* 36em @layout
+  -------------------------------------------------------------------------------*/
+  body {
+    margin: 0 10%; } }
+/* 50em and up
+-------------------------------------------------------------------------------*/
+@media screen and (min-width: 50em) {
+  /* 50em @type
   -------------------------------------------------------------------------------*/
   .distinct {
     font-size: 28.336px;
@@ -1307,17 +1355,6 @@ svg g {
     padding-top: 23.344px;
     padding-top: 1.459rem; }
 
-  .lede {
-    font-size: 23.344px;
-    font-size: 1.459rem;
-    line-height: 38.912px;
-    line-height: 2.432rem; }
-
-  /*
-  	ul, ol {
-  		padding: 0;
-  	}
-  */
   .fig-list li {
     float: none;
     clear: both;
@@ -1334,14 +1371,14 @@ svg g {
     float: left;
     clear: right; }
 
-  /* 40em @Colours
+  /* 50em @colours
   -------------------------------------------------------------------------------*/
-  /* 40em @Navigation
+  /* 50em @navigation
   -------------------------------------------------------------------------------*/
   .prev-nav {
     opacity: .95; }
 
-  /* 40em @Forms
+  /* 50em @forms
   -------------------------------------------------------------------------------*/
   #mc-embedded-subscribe-form {
     clear: both;
@@ -1365,7 +1402,7 @@ svg g {
       border-left: none;
       max-width: 25%; }
 
-  /* 40em @Tables
+  /* 50em @tables
   -------------------------------------------------------------------------------*/
   tbody {
     line-height: 23.344px;
@@ -1383,18 +1420,6 @@ svg g {
   .definition-table tbody tr:hover td {
     background-color: #fff4d8; }
 
-  /*
-  	.table-fig legend {
-  		dt,dd {
-  			float: none;
-  			clear: none;
-  			display: inline-block;
-  		}
-  		dd + dt {
-  			@include rem-fallback( margin-left, $scale-1);
-  		}
-  	}
-  */
   th.tablesorter-header {
     background-image: url(images/bg.gif);
     cursor: pointer;
@@ -1418,8 +1443,11 @@ svg g {
     th.tablesorter-headerAsc:first-child {
       background-position: -5px 8px; }
 
-  /* 40em @Layout
+  /* 50em @layout
   -------------------------------------------------------------------------------*/
+  body {
+    margin: 0 auto; }
+
   .site-header {
     margin: 0 auto;
     max-width: 964.304px;
@@ -1436,7 +1464,11 @@ svg g {
   .read > p,
   .read > ul,
   .read > ol,
-  .read > blockquote {
+  .read > blockquote,
+  .read:not(.subsection) h3,
+  .read > h4,
+  .read > h5,
+  .read > h6 {
     max-width: 66.666%;
     min-width: 33.333%; }
 
@@ -1445,12 +1477,33 @@ svg g {
     clear: right;
     max-width: 66.666%;
     min-width: 33.333%;
-    margin: 64.848px 0px 64.848px 64.848px;
-    margin: 4.053rem 0rem 4.053rem 4.053rem; }
+    margin: 23.344px 0px 64.848px 64.848px;
+    margin: 1.459rem 0rem 4.053rem 4.053rem; }
     .inset img, svg img {
-      width: 100%; } }
-/* 58 em and up */
+      width: 100%; }
+
+  .mid-fig {
+    margin-top: 23.344px;
+    margin-top: 1.459rem;
+    max-width: 66%; }
+
+  .small-fig {
+    margin-top: 23.344px;
+    margin-top: 1.459rem;
+    max-width: 50%; } }
+/* 58em and up
+-------------------------------------------------------------------------------*/
 @media screen and (min-width: 58em) {
+  h2, .subsection h3 {
+    font-size: 28.336px;
+    font-size: 1.771rem;
+    line-height: 38.912px;
+    line-height: 2.432rem;
+    padding: 17px 0px 0px 0px;
+    padding: 1.0625rem 0rem 0rem 0rem;
+    font-weight: bold;
+    width: 80%; }
+
   .nav-link {
     float: right;
     clear: right;
@@ -1460,9 +1513,10 @@ svg g {
   nav ul a, nav ol a {
     padding: 5.04px 0px;
     padding: 0.315rem 0rem; } }
-/* 75 em and up */
+/* 75em and up
+-------------------------------------------------------------------------------*/
 @media screen and (min-width: 75em) {
-  /* 75em @Type
+  /* 75em @type
   -------------------------------------------------------------------------------*/
   .title-page h1 {
     padding-top: 108.112px;
@@ -1475,7 +1529,7 @@ svg g {
     line-height: 38.912px;
     line-height: 2.432rem; }
 
-  /* 75em @Tools
+  /* 75em @tools
   -------------------------------------------------------------------------------*/
   #emphasis-instructions {
     display: block; } }
