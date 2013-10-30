@@ -75,6 +75,10 @@ $serif-stack: georgia;
 
 * {
 	-webkit-text-size-adjust: none;
+	-webkit-transition: opacity 0.3s linear 0s;
+	-moz-transition: opacity 0.3s linear 0s;
+	-o-transition: opacity 0.3s linear 0s;
+	transition: opacity 0.3s linear 0s;
 }
 
 body {
@@ -120,6 +124,13 @@ h1 {
 	}
 }
 
+.title-page .p-name a {
+	border: none;
+	span {
+		display: inline-block;
+	}
+}
+
 .report-title,
 .report-number,
 .nav-link {
@@ -130,6 +141,12 @@ h1 {
 		border: none;
 		background: transparent;
 	}
+}
+
+.nav-link {
+	font-weight: bold;
+	@include rem-fallback( padding, $scale-n3, $scale-n2);
+	@include rem-fallback( margin, $scale-n3, 0, $scale-n3, -$scale-n2);
 }
 
 .tag-line {
@@ -177,6 +194,7 @@ h2.breadcrumb {
 
 h2#preface .supporting {
 	font-weight: normal;
+	display: inline-block;
 }
 
 h3 {
@@ -273,8 +291,13 @@ ul {
 	list-style-type: disc;
 }
 
+.finding-reference {
+	display: block;
+}
+
 .part-2 article.read > p:first-of-type {
 	@include rem-fallback( font-size, $scale-05);
+	line-height: 1.6;
 }
 
 a.license-viz {
@@ -282,9 +305,15 @@ a.license-viz {
 	border: none;
 	float: left;
 	clear: left;
-	@include rem-fallback( height, $scale-2);
-	@include rem-fallback( padding, 0, $scale-0, $scale-2, 0);
+	@include rem-fallback(height, $scale-2);
+	width: auto;
+	@include rem-fallback(padding, 0, $scale-n2, $scale-2, 0);
 	display: block;
+	img {
+		@include rem-fallback(margin-top, $scale-n5);
+		@include rem-fallback(height, $scale-1);
+		width: auto;
+	}
 	&:hover,
 	&:focus,
 	&:active {
@@ -331,12 +360,43 @@ a.license-viz {
 	font-style: italic;
 }
 
+.author {
+	display: inline-block;
+}
+
 .fig-list {
 	strong {
 		display: block;
 	}
 }
 
+.readmill-button {
+	display: block;
+	@include rem-fallback( margin, $scale-n1, 0, 0);
+}
+
+svg.chart {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	z-index: -1;
+	opacity: 1;
+}
+
+.area {
+	fill: transparent;
+	stroke: #d6e9ef;
+	stroke-width: 2px;
+	stroke-linecap: round;
+	-webkit-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-o-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+}
+
+.chart-link {
+	display: none;
+}
 
 /* @colours
 -------------------------------------------------------------------------------*/
@@ -382,7 +442,10 @@ a {
     color: $primary-darker;
     text-decoration: none;
     word-break: break-word;
-    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s linear 0s;
+	-moz-transition: all 0.3s linear 0s;
+	-o-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
 	&:hover,
 	&:focus {
 		background-color: $primary-lighter;
@@ -394,6 +457,11 @@ a {
 		background-color: $primary;
 		color: $primary-darker;
 	}
+}
+
+.nav-link:hover,
+.nav-link:focus {
+	background-color: lighten($primary-lighter, 2%);
 }
 
 h2.breadcrumb a {
@@ -408,9 +476,18 @@ h2.breadcrumb a {
 	}
 }
 
+a.report-title {
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
 .title-page {
 	h1 {
-		.report-name { color: $primary-darker;}
+		.report-name {
+			color: $primary-darker;
+			}
 	}
 }
 
@@ -487,11 +564,14 @@ thead th.tablesorter-headerAsc  {
 	}
 	a:hover,
 	a:focus {
-			color: $primary-darker;
+		color: $primary-darker;
 		span {
 			background-color: $primary-darker;
 			color: $primary-lighter;
-		    transition: all 0.3s ease 0s;
+		    -webkit-transition: all 0.3s linear 0s;
+			-moz-transition: all 0.3s linear 0s;
+			-o-transition: all 0.3s linear 0s;
+			transition: all 0.3s linear 0s;
 		}
 	}
 }
@@ -540,6 +620,10 @@ nav ul, nav ol {
 	ol ol a, ol ul a, ul ol a, ul ul a {
 		@include rem-fallback(padding-left, $scale-3);
 	}
+}
+nav ol strong.chapter-title {
+	display: block;
+	@include rem-fallback(padding, $scale-n2, 0);
 }
 
 .page-nav {
@@ -624,6 +708,10 @@ label {
 /* @Tables
 -------------------------------------------------------------------------------*/
 
+.table-fig {
+ 	overflow: scroll;
+}
+
 table {
 	@include rem-fallback( font-size, $scale-n1);
 	text-align: left;
@@ -642,6 +730,10 @@ figcaption {
 .totals {
 		border-left: 1px $light-contrast solid;
 		border-color: rgba(100,100,100,0.1);
+}
+
+.js .col-year {
+	display: none;
 }
 
 thead {
@@ -785,16 +877,28 @@ body {
 	width: 100%;
 }
 
+/*
 .inset, svg {
 	max-width: 100%;
 	img {
 		width: 100%;
 	}
 }
+*/
 
+.inset {
+	max-width: 100%;
+	img {
+		width: 100%;
+	}
+}
+
+
+/*
 svg g {
 	@include rem-fallback(font-size, $scale-n2);
 }
+*/
 
 [role="contentinfo"] {
 	max-width: 100%;
@@ -847,7 +951,10 @@ svg g {
 		display: inline-block;
 	    color: $primary-darker;
 		font-weight: normal;
-	    transition: all 0.3s ease 0s;
+	    -webkit-transition: all 0.3s linear 0s;
+		-moz-transition: all 0.3s linear 0s;
+		-o-transition: all 0.3s linear 0s;
+		transition: all 0.3s linear 0s;
 		&:hover,
 		&:focus {
 		    color: $text-base;
@@ -974,6 +1081,10 @@ svg g {
 		font-style: normal;
 	}
 
+	.home h1 + p.lede {
+		@include rem-fallback(max-width, 42);
+	}
+
 	/* 36em @layout
 	-------------------------------------------------------------------------------*/
 
@@ -1036,6 +1147,18 @@ svg g {
 			@include rem-fallback( margin-left, 7.5);
 			float: left;
 			clear: right;
+		}
+	}
+
+	.readmill-button {
+		display: inline-block;
+		@include rem-fallback( margin, 0, 0, 0, $scale-2);
+		vertical-align: bottom;
+		height: 1.6em;
+		opacity: .6;
+		&:hover,
+		&:focus {
+			opacity: 1;
 		}
 	}
 
@@ -1155,6 +1278,7 @@ svg g {
 		min-width: 33.333%;
 	}
 
+/*
 	.inset, svg {
 		float: right;
 		clear: right;
@@ -1165,6 +1289,19 @@ svg g {
 			width: 100%;
 		}
 	}
+*/
+
+	.inset {
+		float: right;
+		clear: right;
+		max-width: 66.666%;
+		min-width: 33.333%;
+		@include rem-fallback(margin, $scale-1, 0, $scale-4, $scale-4);
+		img {
+			width: 100%;
+		}
+	}
+
 
 	.mid-fig {
 		@include rem-fallback( margin-top, $scale-1);
@@ -1191,15 +1328,48 @@ svg g {
 		width: 80%;
 	}
 
-	.nav-link {
+	.site-header .nav-link {
 		float: right;
 		clear: right;
- 		@include rem-fallback( margin-top, - $scale-1);
+ 		@include rem-fallback( margin-top, - 2.1);
 	}
 
 	nav ul, nav ol {
 		a {
 			@include rem-fallback(padding, $scale-n4, 0);
+		}
+	}
+	nav ol strong.chapter-title {
+		@include rem-fallback(padding, $scale-n4, 0);
+	}
+
+	.chart-link {
+		display: inline-block;
+		position: absolute;
+		@include rem-fallback(bottom, $scale-2);
+		@include rem-fallback(right, $scale-0);
+		color: #ddd;
+		@include rem-fallback(width, 8);
+		@include rem-fallback(font-size, .7);
+		line-height: 1.662;
+	    -webkit-transition: color, border-bottom-color 0.3s linear 0s;
+		-moz-transition: color, border-bottom-color 0.3s linear 0s;
+		-o-transition: color, border-bottom-color 0.3s linear 0s;
+		transition: color, border-bottom-color 0.3s linear 0s;
+		a {
+			color: #ddd;
+			border-bottom-color: #ddd;
+		}
+		&:hover,
+		&:focus {
+			color: #333;
+			a {
+				color: #0072a2;
+				border-bottom-color: #d6e9ef;
+			}
+			+ svg.chart .area {
+				stroke: #0072a2;
+			}
 		}
 	}
 
@@ -1220,7 +1390,11 @@ svg g {
 	.lede {
 		width: 90%;
 		@include rem-fallback( font-size, $scale-2);
-		@include rem-fallback( line-height, $scale-3);
+		line-height: 1.5;
+	}
+
+	.home h1 + p.lede {
+		max-width: 100%;
 	}
 
 	/* 75em @tools
@@ -1230,4 +1404,27 @@ svg g {
 		display: block;
 	}
 
+	svg.chart {
+		top: 100px;
+	}
+
 }
+
+@media screen and (min-width: 80em) {
+	.chart-link {
+		position: absolute;
+		@include rem-fallback(bottom, $scale-2);
+		@include rem-fallback(left, $scale-2);
+	}
+}
+
+@media screen and (min-width: 88em) {
+	.chart-link {
+		position: absolute;
+		@include rem-fallback(bottom, $scale-5);
+	}
+}
+
+  /* 75em @tools
+  -------------------------------------------------------------------------------*/
+@import "print";

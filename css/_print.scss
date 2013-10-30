@@ -1,0 +1,128 @@
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+}
+
+@media print {
+
+    .read a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    .read figcaption a[href]:after {
+    	display: none;
+    }
+
+    .read figure div {
+    	label, select {
+    		display: none;
+    	}
+    }
+
+    .read abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote,
+    figure,
+    li {
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+    	margin-top: 2cm;
+        margin-right: 0.5cm;
+        margin-bottom: 4cm;
+        margin-left: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid !important;
+    }
+
+    .breadcrumb,
+    .nav-link,
+    .social,
+    #emphasis-instructions,
+    .page-nav,
+    .newsletter-form,
+    .primary-nav h3,
+    .primary-nav h3 + p {
+	    display: none;
+    }
+
+    .primary-nav {
+    	width: 66.666%;
+    	ul, ol {
+    		a {
+    			@include rem-fallback(font-size, $scale-0);
+    			@include rem-fallback(padding-top, $scale-n5);
+    			@include rem-fallback(padding-bottom, $scale-n5);
+    			padding-left: 0;
+    		}
+    	}
+    	strong.chapter-title {
+    			@include rem-fallback(font-size, $scale-0);
+    			@include rem-fallback(padding-top, $scale-n1);
+    			@include rem-fallback(padding-bottom, $scale-n5);
+    	}
+    	& > ol > li > a {
+    		@include rem-fallback(font-size, $scale-0);
+			@include rem-fallback(padding-top, $scale-n1);
+			@include rem-fallback(padding-bottom, $scale-n5);
+    	}
+    }
+
+    .site-footer {
+	    position: static;
+	    bottom: 0;
+	    page-break-before: always;
+    }
+
+	.read > p,
+	.read > ul,
+	.read > ol,
+	.read > blockquote,
+	.read:not(.subsection) h3,
+	.read > h4,
+	.read > h5,
+	.read > h6 {
+		max-width: 66.666%;
+		min-width: 33.333%;
+	}
+
+	body {
+		font-size: 1.25em;
+	}
+
+	// don't forget to find-replace css file 'rem' for 'em' on pdf build
+
+}

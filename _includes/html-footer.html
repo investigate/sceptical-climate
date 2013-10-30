@@ -7,12 +7,94 @@
 
         <script src="{{ site.url }}/js/site.min.js"></script>
 
+        {% if page.layout == "home" or page.layout == "report-titlepage" %}
+
+            <script src="{{ site.url }}/js/d3.v3.min.js"></script>
+
+            <script type="text/javascript">
+
+            function generateGraph() {
+
+                var width = $(HTMLElement).width();
+                var height = width/2;
+
+                if (height < 380) { height = 380; }
+
+                var parseDate = d3.time.format("%Y").parse;
+
+                var x = d3.time.scale()
+                    .range([0, width]);
+
+                var y = d3.scale.linear()
+                    .range([height/2, 0]);
+
+                var area = d3.svg.area()
+                    .x(function(d) { return x(d.year); })
+                    .y0(height)
+                    .y1(function(d) { return y(d.temperature); });
+
+                var svg = d3.select(".site-footer").append("svg") // make the svg
+                    .attr("width", width)
+                    .attr("height", height)
+                    .attr("class", "chart");
+
+                d3.tsv("{{ site.url }}/data.tsv", function(error, data) { // get the data, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.txt, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.gif
+                data.forEach(function(d) {
+                    d.year = parseDate(d.year); // parse the date column into a time format
+                    d.temperature = +d.temperature; // make the close value a number.
+                });
+
+                x.domain(d3.extent(data, function(d) { return d.year; })); // extend the date values across the x access evenly
+                y.domain([0, d3.max(data, function(d) { return d.temperature; })]); // set the max y value to the max height
+
+                svg.append("path")
+                    .datum(data)
+                    .attr("class", "area")
+                    .attr("d", area);
+
+                });
+
+                $('svg.chart').css('height', height-25+'px');
+
+            }
+
+            $(document).ready(function(){
+                generateGraph();
+
+                var graphHTML = '<cite class="chart-link">Global Annual Mean Surface Air Temperature Change, 1880 - 2012. Source: <a href="http://data.giss.nasa.gov/gistemp/graphs_v3/" title="See the source data for this chart on the NASA GISS website">NASA GISS</a></cite>';
+
+                $('svg.chart').before(graphHTML);
+
+                $('.chart-link').mouseenter(function(){
+
+                    $('h2, p:not(.lede), .social').css('opacity','.1');
+                    $('.title-page p.lede').css('opacity','.1')
+                    $('.home.title-page p.lede, .module *, .site-footer *').css('opacity','1')
+
+                })
+                .mouseleave(function(){
+
+                    $('h2, p:not(.lede), .title-page p.lede, .social').css('opacity','1');
+
+                });
+            });
+
+            $(window).resize(function(){
+                $("svg.chart").empty();
+                generateGraph();
+            });
+
+            </script>
+
+        {% endif %}
+
 		<script>
             var _gaq=[['_setAccount','UA-36469193-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+
     </body>
 
 </html>
