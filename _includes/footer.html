@@ -3,16 +3,15 @@
 <footer class="site-footer">
     <article role="contentinfo" class="supporting">
         <section class="credits" id="credits">
-            <p>The <a href="{{ site.url }}" title="Sceptical Climate, a report on the Australian media's coverage of climate change.">Sceptical Climate Report</a> is a project by <a href="http://acij.uts.edu.au" rel="me" onClick="_gaq.push(['_trackEvent', 'Out Bound', 'Out to ACIJ home',]);">The Australian Centre for Independent Journalism</a>, a critical voice on media politics, media policy, and the practice and theory of journalism. Follow ACIJ investigations, news and events at <a href="http://investigate.org.au" title="Investigate.org.au brings you the latest news, views, analysis and debate from the Australian Centre for Independent Journalism." rel="me">Investigate.org.au</a></p>
-            <p>This research project was conducted with support from the <a href="http://www.acfonline.org.au" title="The Australian Conservation Foundation website">Australian Conservation Foundation</a>. The research itself is independent.</p>
+            <p>The <a href="{{ site.url }}" title="Sceptical Climate, a report on the Australian media's coverage of climate change.">Sceptical Climate Report</a> is a project by <a href="http://acij.uts.edu.au" rel="me" itemprop="publisher">The Australian Centre for Independent Journalism</a>, a critical voice on media politics, media policy, and the practice and theory of journalism. Follow ACIJ investigations, news and events at <a href="http://investigate.org.au" title="Investigate.org.au brings you the latest news, views, analysis and debate from the Australian Centre for Independent Journalism." rel="me">Investigate.org.au</a></p>
+            {% if include.report_number == "Part 1" %}<p>This research project was conducted with support from the <a href="http://www.acfonline.org.au" title="The Australian Conservation Foundation website">Australian Conservation Foundation</a>. The research itself is independent.</p>{% endif %}
             <ul>
-                <li>Project Director and Report Author: <a href="http://wendybacon.com">Wendy&nbsp;Bacon</a></li>
+                <li>Project Director and Report Author: <a href="http://wendybacon.com" class="author" itemprop="author">Wendy Bacon</a></li>
                 <li>Project and Research Manager: Arunn&nbsp;Jegan</li>
-                <li>Design and web development: <a href="mailto:info@collagraph.com.au" title="Contact Collagraph: clear design for the web." onClick="_gaq.push(['_trackEvent', 'Out Bound', 'out to Collagraph']);">Collagraph</a></li>
-                <li><a href="https://github.com/investigate/sceptical-climate" title="Access this project on Github." onClick="_gaq.push(['_trackEvent', 'Out Bound', 'out to Github']);">Sceptical Climate is hosted on Github</a></li>
+                <li>Design and web development: <a href="http://collagraph.com.au" title="Collagraph: clear design for the web." onClick="_gaq.push(['_trackEvent', 'Out Bound', 'out to Collagraph']);">Collagraph</a></li>
             </ul>
         </section>
-        <section role="license">
+        <section>
             <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="license-viz"><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" alt="Creative Commons License"></a>
             <p>The content of this site is available for your use under a creative commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a> license, unless specifically noted. Feel free to quote, republish, backup, and move it to whatever platform works&nbsp;for&nbsp;you.</p>
         </section>

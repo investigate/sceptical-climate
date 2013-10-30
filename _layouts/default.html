@@ -18,5 +18,10 @@
 	{% include contents.html report_number="Part 2" report_number_path="part-2" %}
 {% endif %}
 
-{% include footer.html %}
+{% if page.report_number == "Part 1" %}
+	{% include footer.html report_number="Part 1" report_number_path="part-1" %}
+{% else %}
+	{% include footer.html report_number="Part 2" report_number_path="part-2" %}
+{% endif %}
+
 {% include html-footer.html %}

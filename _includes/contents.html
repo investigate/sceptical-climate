@@ -1,31 +1,40 @@
 <nav id="toc" class="primary-nav xoxo" role="navigation">
 	<h2>Table of Contents</h2>
-    <h3><a href="{{ site.url }}" class="report-title">{{ site.title }}</a> :
+    <h3><a href="{{ site.url }}" class="report-title" title="A report on media coverage of climate change in Australia from the Australian Centre for Independent Journalism">{{ site.title }}</a>
+
+    {% if include.report_number == "Part 1" %}
 
     <!-- Table of contents PART 1 OPEN -->
 
-    {% if include.report_number == "Part 1" %}
-	<a href="{{ site.url }}/part-1/" class="report-number" title="">{{ include.report_number }} - Climate Change Policy</a></h3>
+    <a href="{{ site.url }}/part-1/" class="report-number" title="This Australian Centre for Independent Journalism report analyses how ten publications in mainstream corporate media covered carbon policy for six months in 2011." itemprop="url">{{ include.report_number }}: Climate Change Policy</a></h3>
 
+	<time itemprop="datePublished" class="dt-published supporting" datetime="2011-12-01 12:00:00">Released December 1, 2011</time>
+    <p><strong><a class="supporting" href="http://investigate.org.au/wp-content/uploads/2013/08/sceptical-climate-part1.pdf" download="Sceptical Climate Part 1" title="Download Sceptical Climate Part 1: Climate Change Policy as .pdf (7mb)" onClick="_gaq.push(['_trackEvent', 'downloads', 'Report 1 Download']);">Download Sceptical Climate Part 1: Climate Change Policy as&nbsp;.pdf&nbsp;(7mb)</a></strong> <span class="readmill-button"><a class="send-to-readmill" href="https://readmill.com" data-download-url="http://investigate.org.au/wp-content/uploads/2013/09/sceptical-climate-part2.pdf" data-buy-url="http://sceptical-climate.investigate.org.au/part-1/" data-display="small">Send to Readmill</a>
 
-    <em class="supporting">Released December 1, 2011</em>
-    <p><a class="supporting" href="http://investigate.org.au/wp-content/uploads/2013/08/sceptical-climate-part1.pdf" download="Sceptical Climate Part 1" title="Download Sceptical Climate : Part 1 - Climate Change Policy as .pdf [ 7mb ]" onClick="_gaq.push(['_trackEvent', 'downloads', 'Report 1 Download']);">Download Sceptical Climate : Part 1 - Climate Change Policy as .pdf [ 7mb ]</a></p>
+<script type="text/javascript">
+(function() {
+  var st = document.createElement('script'); st.type = 'text/javascript'; st.async = true;
+  st.src = 'https://platform.readmill.com/send.js';
+  var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(st, p);
+})();
+</script></span>
+    </p>
     <ol>
         <li><a href="{{ site.url }}/part-1/#preface" class="scroll">1. Preface</a></li>
         <li><a href="{{ site.url }}/part-1/key-findings/">2. Key findings</a>
             <ol>
-                <li><a href="{{ site.url }}/part-1/key-findings/#coverage_of_climate_change_policy">2.1 Coverage of climate change policy</a></li>
-                <li><a href="{{ site.url }}/part-1/key-findings/#language_used_to_define_the_debate">2.2 Language used to define the debate</a></li>
-                <li><a href="{{ site.url }}/part-1/key-findings/#framing_of_arguments_against_the_policy">2.3 Framing of arguments against the policy</a></li>
-                <li><a href="{{ site.url }}/part-1/key-findings/#sources_in_the_australian_media">2.4 Sources in the Australian media</a></li>
-                <li><a href="{{ site.url }}/part-1/key-findings/#editorials">2.5 Editorials</a></li>
-                <li><a href="{{ site.url }}/part-1/key-findings/#opinion">2.6 Opinion</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#coverage_of_climate_change_policy" class="scroll">2.1 Coverage of climate change policy</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#language_used_to_define_the_debate" class="scroll">2.2 Language used to define the debate</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#framing_of_arguments_against_the_policy" class="scroll">2.3 Framing of arguments against the policy</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#sources_in_the_australian_media" class="scroll">2.4 Sources in the Australian media</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#editorials" class="scroll">2.5 Editorials</a></li>
+                <li><a href="{{ site.url }}/part-1/key-findings/#opinion" class="scroll">2.6 Opinion</a></li>
             </ol>
         </li>
         <li><a href="{{ site.url }}/part-1/introduction/">3. Introduction</a>
             <ol>
-                <li><a href="{{ site.url }}/part-1/introduction/#why_newspapers">3.1 Why newspapers?</a></li>
-                <li><a href="{{ site.url }}/part-1/introduction/#negative_or_critical">3.2 Negative or critical?</a></li>
+                <li><a href="{{ site.url }}/part-1/introduction/#why_newspapers" class="scroll">3.1 Why newspapers?</a></li>
+                <li><a href="{{ site.url }}/part-1/introduction/#negative_or_critical" class="scroll">3.2 Negative or critical?</a></li>
             </ol>
         </li>
         <li><strong class="chapter-title" id="findings">4. Findings</strong>
@@ -47,43 +56,61 @@
         <li><a href="{{ site.url }}/part-1/appendix">Appendix: List of figures</a></li>
         <li><a href="{{ site.url }}/part-1/credits">Project credits</a></li>
     </ol>
-    <!-- <p class="discrete">ISBN: - 978-0-9870682-0-0</p> -->
+	<p class="discrete">ISBN: <span itemprop="isbn">978-0-9870682-2-4</span></p>
     <ul>
 	    <li><a href="{{ site.url }}" title="Sceptical Climate, a report on the Australian media's coverage of climate change.">Sceptical Climate Home</a></li>
     </ul>
+
     <!-- Table of contents PART 1 CLOSE -->
+
     {% else %}
+
     <!-- Table of contents PART 2 OPEN -->
-    <a href="<?php echo $site_url . $report_two_slug ?>" class="report-number" title="">Part 2 - Part 2 lable</a></h3>
-    <p><a class="supporting" href="http://investigate.org.au/wp-content/uploads/2013/09/sceptical-climate-part2.pdf" download="Sceptical Climate Part 2" title="Download the 7mb pdf version of Sceptical Climate : Part 2 - Climate Change Policy.">Download this report [ 7mb PDF ]</a></p>
+
+    <a href="{{ site.url }}/part-2/" class="report-number" title="This report looks at coverage of climate science in ten Australian newspapers between February and April in 2011 and 2012 and asks: What is the quality and nature of climate science reporting in Australia? What role are these publications playing in informing the public about climate science?" itemprop="url">{{ include.report_number }}: Climate Science in Australian Newspapers</a></h3>
+
+	<time itemprop="datePublished" class="dt-published supporting" datetime="2013-10-31 12:00:00">Released October 31, 2013</time>
+    <p><strong><a class="supporting" href="http://investigate.org.au/wp-content/uploads/2013/10/Sceptical-Climate-Part-2-Climate-Science-in-Australian-Newspapers.pdf" download="Sceptical Climate Part 2: Climate Science in Australian Newspapers" title="Download Sceptical Climate Part 2: Climate Science in Australian Newspapers as a .pdf (4mb)">Download Sceptical Climate Part 2: Climate Science in Australian Newspapers as&nbsp;.pdf&nbsp;(4mb)</a> <span class="readmill-button"><a class="send-to-readmill" href="https://readmill.com" data-download-url="http://investigate.org.au/wp-content/uploads/2013/10/Sceptical-Climate-Part-2-Climate-Science-in-Australian-Newspapers.pdf" data-buy-url="http://sceptical-climate.investigate.org.au/part-2/" data-display="small">Send to Readmill</a></strong>
+
+<script type="text/javascript">
+(function() {
+  var st = document.createElement('script'); st.type = 'text/javascript'; st.async = true;
+  st.src = 'https://platform.readmill.com/send.js';
+  var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(st, p);
+})();
+</script></span></p>
 
     <ol>
-        <li><a href="{{ site.url }}/part-2/introduction">1 Introduction</a></li>
-        <li><a href="{{ site.url }}/part-2/key-findings">2 Key Findings</a></li>
-        <li><a href="{{ site.url }}/part-2/background">3 Background</a></li>
+        <li><a href="{{ site.url }}/part-2/#preface" class="scroll" title="An introduction to Sceptical Climate Part 2: Climate Science in Australian Newspapers by report author Wendy Bacon.">1. Preface</a></li>
+        <li><a href="{{ site.url }}/part-2/key-findings" title="The most significant findings from Sceptical Climate Part 2: Climate Science in Australian Newspapers. Findings are linked to relevant sections in the report.">2. Key Findings</a></li>
+        <li><a href="{{ site.url }}/part-2/background" title="This section places the report in the context of issues confronting journalists reporting climate change, particularly ethical ones. Issues affecting climate science reporting in Australia are also discussed.">3. Background Issues</a></li>
         <li><strong class="chapter-title" id="findings">4. Findings</strong>
             <ol>
-                <li><a href="{{ site.url }}/part-2/findings/research-design-methodology">4.1 Research design, Methodology</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/quantity-of-coverage">4.2 Quantity of Climate Science Coverage</a></li>
-		        <li><a href="{{ site.url }}/part-2/findings/genre">4.3 Genre</a>
-                <li><a href="{{ site.url }}/part-2/findings/prominence-of-coverage">4.4 Prominence of climate science coverage</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/peer-reviewed-research">4.5 Reporting of peer reviewed research</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/case-study-low-newspaper-nt">4.6 Case study: Low newspaper: Northern Territory</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/case-study-climate-updates-reports">4.7 Case study: March 12, 2011: Release of Climate Updates reports</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/extreme-weather">4.8 Climate change and extreme weather</a></li>
-                <li><a href="{{ site.url }}/part-2/findings/scepticism">4.9 Scepticism</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/research-design-methodology" title="The methodology for the content analysis used in Sceptical Climate Part 2: Climate Science in Australian Newspapers. Categories for coding are explained. Content analysis is supported by case studies.">4.1 Research design and methodology</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/quantity-of-coverage" title="Analysis of the quantity of climate science coverage by 10 Australian newspapers during sample periods in 2011 and 2012.">4.2 Quantity of climate science coverage</a></li>
+		        <li><a href="{{ site.url }}/part-2/findings/genre" title="Analysis of how the coverage of climate science by ten Australian newspapers fits into reporting genres of ‘news’, ‘features’, ‘comment’ and ‘editorials’. 31% of 602 articles were commentary. This finding highlights the significant role assigned by editors to opinion writers who promote their own attitudes towards climate change.">4.3 Genre of climate science articles</a>
+                <li><a href="{{ site.url }}/part-2/findings/prominence-of-coverage" title="Analysis of the prominence given to climate science coverage by ten Australian newspapers, according to where articles were positioned within the paper. Approximately 70%, or over two-thirds, of articles reviewed appeared after page 8.">4.4 Prominence of climate science coverage</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/peer-reviewed-research" title="Analysis of the use of peer reviewed climate science research in the reporting of climate science in ten Australian newspapers.">4.5 Reporting of peer reviewed research</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/scepticism" title="A comparison of the levels of scepticism towards the scientific consensus on climate change in Australian newspapers.">4.6 Scepticism and climate science coverage</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/news-corp-vs-fairfax" title="A comparison of climate science reporting in News Corp and Fairfax Media publications in  Australia’s two largest cities, Melbourne and Sydney, the only Australian cities with more than one metropolitan paper.">4.7 Comparing News Corp and Fairfax Media newspapers in Melbourne and Sydney</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/the-australian" title="An analysis of the coverage of climate science in The Australian newspaper. This section reviews previous research on scepticism in The Australian and uses examples to show how The Australian builds uncertainty and doubt about climate science through its coverage.">4.8 How The Australian builds doubt about climate scientists and their findings</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/extreme-weather" title="Why are disasters and extreme weather events such a strong theme in climate science coverage? This section of Sceptical Climate Part 2: Climate Science analyses the way that extreme weather and climate science were reported in Australian newspapers.">4.9 Climate change and extreme weather</a></li>
+                <li><a href="{{ site.url }}/part-2/findings/the-northern-territory-news" title="Discussion of the very low levels of reporting on climate science in the NT News, with an examination of the role of Andrew Bolt, who is the dominant voice in climate science reporting in that publication.">4.10 News Corp’s Northern Territory News - example of low level climate science coverage</a></li>
             </ol>
         </li>
-        <li><a href="{{ site.url }}/part-2/conclusion">5 Conclusion</a></li>
-        <li><a href="{{ site.url }}/part-2/bibliography">Bibliography</a></li>
-        <li><a href="{{ site.url }}/part-2/appendix">Appendix: List of figures</a></li>
+        <li><a href="{{ site.url }}/part-2/conclusion" title="Conclusion and discussion of the findings from Sceptical Climate Part 2: Climate Science in Australian Newspapers, including discussion of recent developments in coverage of climate science during the NSW bushfires in October 2013.">5. Conclusion</a></li>
+        <li><a href="{{ site.url }}/part-2/bibliography" title="Citations and references for Sceptical Climate Part 2: Climate Science in Australian Newspapers.">Bibliography</a></li>
+        <li><a href="{{ site.url }}/part-2/appendix" title="List, with links, of all the figures in Sceptical Climate Part 2: Climate Science in Australian Newspapers.">Appendix: List of figures</a></li>
+        <li><a href="{{ site.url }}/part-2/credits" title="The list of people who worked on and supported the research and production of Sceptical Climate Part 2.">Project credits</a></li>
     </ol>
+	<p class="discrete">ISBN: <span itemprop="isbn">978-0-9870682-4-8</span></p>
+    <ul>
+	    <li><a href="{{ site.url }}" title="Sceptical Climate, a report on the Australian media's coverage of climate change.">Sceptical Climate Home</a></li>
+    </ul>
+
+
     <!-- Table of contents PART 2 CLOSE -->
+
     {% endif %}
 
 </nav>
-
-
-
-
-

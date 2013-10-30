@@ -1,0 +1,17 @@
+{% for page in site.pages %}
+
+{% if page.report_number == "Part 1" %}
+
+{% if page.title != "1. Preface" %}
+
+{% if page.title != "4. Findings" %}
+
+{{ page.content }}
+
+{% endif %}
+
+{% endif %}
+
+{% endif %}
+
+{% endfor %}
