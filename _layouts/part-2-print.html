@@ -1,0 +1,44 @@
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Sceptical Climate Part 2: Climate Science in Australian Newspapers</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+<script src="http://localhost:4000/js/modernizr.min.js"></script>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="http://localhost:4000/css/style.css" type="text/css" />
+
+<!-- jQuery -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.2"></script>
+<!-- Fallback if CDN fails -->
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+document.write(unescape('%3Cscript type="text/javascript" src="http://localhost:4000/js/jquery.min.js"%3E%3C/script%3E'));
+}
+</script>
+
+</head>
+
+<body class="part-2">
+
+<hr />
+{% include contents.html report_number="Part 2" report_number_path="part-2" %}
+{% for page in site.pages %}
+{% if page.report_number == "Part 2" %}
+{% if page.title != "Sceptical Climate Part 2: Climate Science in Australian Newspapers" %}
+{% if page.title != "4. Findings" %}
+<hr />
+
+{{ page.content }}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% include footer.html %}
+{% include html-footer.html %}

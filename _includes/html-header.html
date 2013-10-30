@@ -6,7 +6,7 @@
 <!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
 
-    <head id="sceptical-climate">
+    <head>
 
         <meta charset="UTF-8">
 
@@ -45,7 +45,7 @@
         {% if include.report_number == "Part 1" %}<meta property="og:image" content="{{ site.url }}/images/social-part-1.jpg">{% else %}<meta property="og:image" content="{{ site.url }}/images/social-part-2.jpg">{% endif %}
         <meta property="og:title" content="{{ page.title }}">
         {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% else %}<meta property="og:description" content="{{ site.description }}">{% endif %}
-        <meta property="article:author" content="acijuts">
+        <meta property="article:author" content="{{ site.name }}">
         <meta property="article:tag" content="{{ site.keywords }}">
 
         <!--[if lt IE 9]>
@@ -57,7 +57,7 @@
     	<script src="{{ site.url }}/js/modernizr.min.js"></script>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="{{ site.url }}/css/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ site.url }}/css/style.css" type="text/css" />
 
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.2"></script>
@@ -70,4 +70,4 @@
 
 	</head>
 
-    <body class="{{ include.report_number_path }}">
+    <body class="{{ include.report_number_path }}" {% if page.layout == "report-titlepage" %}itemscope itemtype="http://schema.org/Book"{% endif %} >

@@ -1,9 +1,7 @@
 <!-- Header OPEN -->
-
 <header class="site-header" role="banner">
-	<h1><a href="{{ site.url }}" class="report-title">{{ site.title }}</a> : <a href="{{ site.url }}/{{ include.report_number_path }}" class="report-number" title="">{{ include.report_number }}{% if include.report_number == "Part 1" %} - Climate Change Policy{% endif %}</a></h1>
+	<h1><a href="{{ site.url }}" class="report-title">{{ site.title }}</a> <a href="{{ site.url }}/{{ include.report_number_path }}" class="report-number" title="">{{ include.report_number }}{% if include.report_number == "Part 1" %}: Climate Change Policy{% else %}: Climate Science in Australian Newspapers{% endif %}</a></h1>
 	<p class="tag-line supporting">{{ site.description }}</p>
 	<a class="nav-link scroll supporting" href="#toc">Table of Contents</a>
 </header>
-
 <!-- Header CLOSE -->

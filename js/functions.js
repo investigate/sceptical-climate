@@ -5,8 +5,10 @@
 
         // Smooth scrolling
         $('.scroll').click(function(event){
-            // event.preventDefault();
-            $('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
+            event.preventDefault();
+            var thisHash = $(this).attr('href');
+            $('html, body').animate({scrollTop:$(this.hash).offset().top+1}, 300);
+            window.history.replaceState('Object', 'Title', '/'+thisHash);
         });
 
         // Create select menu to switch between table views
