@@ -7,12 +7,12 @@ Version 1.0
 
 @import "mixins";
 
-/* natural box layout */
+/* Natural box layout */
 * {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
 .chromeframe {position: absolute; top: 0;}
 
-/* @webfonts
+/* @Webfonts
 -------------------------------------------------------------------------------*/
 
 @font-face {
