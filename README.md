@@ -4,6 +4,18 @@ By Professor Wendy Bacon
 
 Design and web development by [Collagraph](http://collagraph.com.au/)
 
+## Development
+
+This is a Jekyll site, built to be served over GitHub Pages.
+
+Run `bundle install` to install Jekyll and other dependencies.
+
+Start up the Jekyll server and watch process with:
+
+    bundle exec jekyll serve --watch
+
+The site will then be available at http://localhost:4000/
+
 ## Open Source projects incorporated in the report
 
 +	[Social Count](https://github.com/filamentgroup/SocialCount/)
