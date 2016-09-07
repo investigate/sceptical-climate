@@ -1,15 +1,15 @@
 
         <!-- Include respond.js for < IE 9 -->
         <!--[if lt IE 9]>
-            <script src="{{ site.url }}/js/respond.min.js"></script>
-            <script src="{{ site.url }}/js/html5shiv.min.js"></script>
+            <script src="{{ site.baseurl }}/js/respond.min.js"></script>
+            <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
         <![endif]-->
 
-        <script src="{{ site.url }}/js/site.min.js"></script>
+        <script src="{{ site.baseurl }}/js/site.min.js"></script>
 
         {% if page.layout == "home" or page.layout == "report-titlepage" %}
 
-            <!-- <script src="{{ site.url }}/js/d3.v3.min.js"></script> -->
+            <!-- <script src="{{ site.baseurl }}/js/d3.v3.min.js"></script> -->
 
             <script type="text/javascript">
 
@@ -37,7 +37,7 @@
                     .attr("height", height)
                     .attr("class", "chart");
 
-                d3.csv("{{ site.url }}/data.csv", function(error, data) { // get the data, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.txt, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.gif
+                d3.csv("{{ site.baseurl }}/data.csv", function(error, data) { // get the data, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.txt, http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.gif
                 data.forEach(function(d) {
                     d.year = +d.year; // parse the date column into a time format
                     d.temperature = +d.temperature; // make the close value a number.
@@ -60,7 +60,7 @@
             $(document).ready(function(){
                 /* generateGraph(); */
 
-                var graphHTML = '<figure class="degrees-chart"><img src="{{ site.url }}/images/degrees-chart.png" /></figure><cite class="chart-link">Global Annual Mean Surface Air Temperature Change, 1880 - 2012. Source: <a href="http://data.giss.nasa.gov/gistemp/graphs_v3/" title="See the source data for this chart on the NASA GISS website">NASA GISS</a></cite>';
+                var graphHTML = '<figure class="degrees-chart"><img src="{{ site.baseurl }}/images/degrees-chart.png" /></figure><cite class="chart-link">Global Annual Mean Surface Air Temperature Change, 1880 - 2012. Source: <a href="http://data.giss.nasa.gov/gistemp/graphs_v3/" title="See the source data for this chart on the NASA GISS website">NASA GISS</a></cite>';
 
                 $('footer article.supporting').after(graphHTML);
 
