@@ -1,8 +1,8 @@
 <!-- Page navigation OPEN -->
 <nav class="module page-nav">
     <ul>
-        {% if page.next_page %}<li><a href="{{ page.next_page_path }}" title="Next" class="next-nav"><span>Next</span> {{ page.next_page }}</a></li>{% endif %}
-        {% if page.previous_page %}<li><a href="{{ page.previous_page_path }}" title="Previous" class="prev-nav"><span>Previous</span> {{ page.previous_page }}</a></li>{% endif %}
+      {% if page.next_page %}<li><a href="{{ site.baseurl }}{{ page.next_page_path }}" title="Next" class="next-nav"><span>Next</span> {{ page.next_page }}</a></li>{% endif %}
+        {% if page.previous_page %}<li><a href="{{ site.baseurl }}{{ page.previous_page_path }}" title="Previous" class="prev-nav"><span>Previous</span> {{ page.previous_page }}</a></li>{% endif %}
     </ul>
 </nav>
 <!-- Page navigation CLOSE -->
