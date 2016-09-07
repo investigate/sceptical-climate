@@ -7,4 +7,5 @@ permalink: pretty
 timezone: Australia/Sydney
 title: Sceptical Climate
 twitter: "@UTSACIJ"
-url: "/sceptical-climate"
+baseurl: "/sceptical-climate/"
+
