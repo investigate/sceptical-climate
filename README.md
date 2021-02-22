@@ -6,7 +6,9 @@ Design and web development by [Collagraph](http://collagraph.com.au/)
 
 ## Development
 
-This is a Jekyll site, built to be served over GitHub Pages.
+This project is built as a [Jekyll site](https://jekyllrb.com/), built to be served over [GitHub Pages](https://pages.github.com/).
+
+To get set up to build the site locally, to test changes for example, follow the [Jekyll project's instructions on installing the prerequisites](https://jekyllrb.com/docs/installation/) to work on a Jekyll site.
 
 Run `bundle install` to install Jekyll and other dependencies.
 
@@ -26,4 +28,4 @@ The site will then be available at http://localhost:4000/
 +	[d3](http://d3js.org/)
 +	[Respond.js](https://github.com/scottjehl/Respond/)
 +	[html5shiv](https://code.google.com/p/html5shiv/)
-+   [Jekyll](http://jekyllrb.com/)
++ [Jekyll](http://jekyllrb.com/)
