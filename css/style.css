@@ -328,7 +328,8 @@ h1 {
   margin: 0.382rem 0rem 0.382rem -0.637rem; }
 
 .tag-line {
-  display: inline-block;
+  display: block;
+  clear: left;
   margin-top: 0;
   font-style: italic;
   line-height: 23.344px;
