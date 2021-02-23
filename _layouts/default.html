@@ -1,9 +1,12 @@
 {% if page.report_number == "Part 1" %}
 	{% include html-header.html report_number="Part 1" report_number_path="part-1" %}
 	{% include header.html report_number="Part 1" report_number_path="part-1" %}
-{% else %}
+{% elsif page.report_number == "Part 2" %}
 	{% include html-header.html report_number="Part 2" report_number_path="part-2" %}
 	{% include header.html report_number="Part 2" report_number_path="part-2" %}
+{% elsif page.report_number == "Part 3" %}
+	{% include html-header.html report_number="Lies, Debates and Silences" report_number_path="part-3" %}
+	{% include header.html report_number="Lies, Debates and Silences" report_number_path="part-3" %}
 {% endif %}
 
 {{ content }}
