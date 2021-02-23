@@ -18,6 +18,13 @@ Start up the Jekyll server and watch process with:
 
 The site will then be available at http://localhost:4000/
 
+### CSS
+
+Previously this project used SASS to generate the style.scss file.
+
+The old `.scss` files have been archived to .`/css/old-scss/`.
+Now `style.css` and `print.css` are updated directly.
+
 ## Open Source projects incorporated in the report
 
 +	[Social Count](https://github.com/filamentgroup/SocialCount/)
