@@ -55,8 +55,7 @@
 
     <!-- Table of contents PART 1 CLOSE -->
 
-		{% elsif include.report_number == "Part 2" %}
-
+    {% elsif include.report_number == "Part 2" %}
     <!-- Table of contents PART 2 OPEN -->
 
     <a href="{{ site.baseurl }}/part-2/" class="report-number" title="This report looks at coverage of climate science in ten Australian newspapers between February and April in 2011 and 2012 and asks: What is the quality and nature of climate science reporting in Australia? What role are these publications playing in informing the public about climate science?" itemprop="url">{{ include.report_number }}: Climate Science in Australian Newspapers</a></h3>
@@ -95,47 +94,54 @@
 
     <!-- Table of contents PART 2 CLOSE -->
 
-		{% else %}
+    {% elsif include.report_number == "Lies, Debates and Silences" %}
+    <!-- Table of contents PART 3 OPEN -->
 
-		<!-- Table of contents PART 3 OPEN -->
+    <a href="{{ site.baseurl }}/part-3/" class="report-number" title="This report looks at coverage of climate science in ten Australian newspapers between February and April in 2011 and 2012 and asks: What is the quality and nature of climate science reporting in Australia? What role are these publications playing in informing the public about climate science?" itemprop="url">{{ include.report_number }}</a></h3>
 
-		<a href="{{ site.baseurl }}/part-3/" class="report-number" title="This report presents the results of an investigation into how four publications, owned by Australia’s most powerful media company, News Corp Australia, covered anthropogenic climate change and its impacts from April 2019 to March 2020. These publications are The Australian, Herald Sun, The Daily Telegraph and The Courier Mail." itemprop="url">{{ include.report_number }}: Lies, Debates, and Silences: How News Corp Produces Climate Scepticism in Australia.</a></h3>
+	<time itemprop="datePublished" class="dt-published supporting" datetime="2020-12-16 12:00:00">Released December 2020</time>
+    <p><strong><a class="supporting" href="{{ site.baseurl }}/2020-12_Lies_Debates_and_Silences.pdf" download="Sceptical Climate: Lies, Debates and Silences" title="Download Sceptical Climate: Lies, Debates and Silences as a .pdf (7.5mb)" onClick="_gaq.push(['_trackEvent', 'downloads', 'Click Download', 'Part 2']);">Download Sceptical Climate: Lies, Debates and Silences as&nbsp;.pdf&nbsp;(7.5mb)</a></p>
 
-		<time itemprop="datePublished" class="dt-published supporting" datetime="2020-12-00 12:00:00">Released December, 2020</time>
+    <ol>
+        <li><a href="{{ site.baseurl }}/part-3/#introduction" class="scroll">1. Introduction</a></li>
+        <li><a href="{{ site.baseurl }}/part-3/key-findings">2. Key Findings</a></li>
+        <li><a href="{{ site.baseurl }}/part-3/methodology">3. Methodology</a></li>
+        <li><strong class="chapter-title" id="findings">4. Research Findings</strong>
+            <ol>
+                <li><a href="{{ site.baseurl }}/part-3/findings/quantity-of-coverage">4.1 Quantity of coverage</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/findings/types-of-items">4.2 Types of items</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/findings/themes">4.3 Themes</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/findings/who-gets-a-voice">4.4 Who gets a voice and who is silenced?</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/findings/how-news-corp-produces-scepticism">4.5 How News Corp produces climate scepticism</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/findings/attitudes-towards-climate-action">4.6 Attitude towards climate action/efforts</a></li>
+            </ol>
+        </li>
+        <li><strong class="chapter-title" id="the-sceptics">5. The Sceptics</strong>
+            <ol>
+                <li><a href="{{ site.baseurl }}/part-3/the-sceptics/columnists">5.1 Columnists</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/the-sceptics/editors">5.2 Editors</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/the-sceptics/sources">5.3 Sceptic Sources</a></li>
+            </ol>
+        </li>
+        <li><strong class="chapter-title" id="reporting-climate-change">6. Reporting Climate Change</strong>
+            <ol>
+                <li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/politics">6.1 Politics and case study: Climate emergency and local councils</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/representing-scientists-and-advocates">6.2 Representing scientists and climate change activists</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/the-bottom-line">6.3 The bottom line and climate change - Reporting Business</a></li>
+                <li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/the-language-of-denial">6.4 Protest climate movements and the language of denial</a></li>
+            </ol>
+        </li>
+        <li><a href="{{ site.baseurl }}/part-3/conclusion">5. Conclusion</a></li>
+        <li><a href="{{ site.baseurl }}/part-3/bibliography">Bibliography</a></li>
+        <li><a href="{{ site.baseurl }}/part-3/list-of-figures">Appendix: List of figures</a></li>
+        <li><a href="{{ site.baseurl }}/part-3/credits">Project credits</a></li>
+    </ol>
+    <ul>
+	    <li><a href="{{ site.baseurl }}" title="Sceptical Climate, a report on the Australian media's coverage of climate change.">Sceptical Climate Home</a></li>
+    </ul>
 
-		<ol>
-			<li><a href="{{ site.baseurl }}/part-3/introduction" title="Introduction to Sceptical Climate Part 3 and its authors.">1. Introduction</a><li>
-			<li><a href="{{ site.baseurl }}/part-3/key-findings" title="The most significant findings from Sceptical Climate Part 3: How News Corp produces climate scepticism in Australia. Findings are linked to relevant sections in the report.">2. Key Findings</a></li>
-			<li><a href="{{ site.baseurl }}/part-3/methodology" title="The methodology of the report's investigation, explaining coding categories and discussing the use of content analysis and case studies.">3. Methodology</a></li>
-			<li><a href="{{ site.baseurl }}/part-3/findings" title="The Findings section." id="findings">4. Research Findings</a>
-				<ol>
-					<li><a href="{{ site.baseurl }}/part-3/findings/quantity-of-coverage" title="The Australian comprises nearly half of all News Corp coverage of climate change, with tabloid papers containing less information of any level of quality on the topic.">4.1 Quantity of Coverage</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/findings/types-of-items" title="Analysis of News Corp items of reportage or commentary, divided into five categories.">4.2 Types of Items</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/findings/themes" title="Analysis of the primary and secondary themes of reportage and commentary items across the four News Corp publications">4.3 Themes</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/findings/who-gets-a-voice" title="Analysis of News Corp's selection of sources. News Corp prioritises certain voices and opinions over others, reinforcing climate scepticism.">4.4 Who Gets A Voice and Who Is Silenced?</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/findings/how-news-corp-produces-scepticism" title="Analysis of News Corp's production of content undermining climate science acceptance.">4.5 How News Corp Produces Climate Scepticism</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/findings/attitude-towards-climate-action" title="Research from this report has observed News Corp publications adopt a consistently negative approach towards climate action.">4.6 Attitude Towards Climate Action/Efforts</a></li>
-				</ol>
-			</li>
-			<li><a href="{{ site.baseurl }}/part-3/the-sceptics" title="Actors and individuals affiliated with News Corp." id="the-sceptics">5. The Sceptics</a>
-				<ol>
-					<li><a href="{{ site.baseurl }}/part-3/the-sceptics/columnists" title="Discussion on News Corp's most influential and prolific columnists and their contribution towards attitudes of climate scepticism.">5.1 Columnists</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/the-sceptics/editors" title="News Corp Australia has been publishing sceptical editorials since 1997, highlighting a culture of editors who push for sceptic views on climate science.">5.2 Editors</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/the-sceptics/sources" title="An examination of the high-profile sources of climate scepticism used by News Corp Australia.">5.3 Sceptic sources</a></li>
-				</ol>
-			</li>
-			<li><a href="{{ site.baseurl }}/part-3/reporting-climate-change" title="Language and framing used by News Corp publications to report climate change and climate action." id="reporting-climate-change">6. Reporting Climate Change</a>
-				<ol>
-					<li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/politics" title="Discussion of how political and policy themes influence climate change coverage at News Corp.">6.1 Politics and Case Study: Climate Emergency and Local Councils</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/representing-scientists-and-advocates" title="A closer look at how scientists and advocates for climate action are represented across News Corp publications.">6.2 Representing Scientists and Climate Change Advocates</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/the-bottom-line" title="How business reportage influences climate change coverage by News Corp.">6.3 The Bottom Line and Climate Change: Reporting Business</a></li>
-					<li><a href="{{ site.baseurl }}/part-3/reporting-climate-change/the-language-of-denial" title="The language used by items published by News Corp sets out to delegitimise climate change advocates.">6.4 Protest, Climate Movements, and the Language of Denial</a></li>
-				</ol>
-			</li>
-			<li><a href="{{ site.baseurl }}/part-3/conclusion" title="Conclusion of the report's findings.">7. Conclusion</a></li>
-			<li><a href="{{ site.baseurl }}/part-3/bibliography-and-list-of-figures">Appendix: Bibliography and List of Figures</a></li>
 
-		<!-- Table of contents PART 3 CLOSE -->
+    <!-- Table of contents PART 3 CLOSE -->
 
     {% endif %}
 
