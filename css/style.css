@@ -409,8 +409,8 @@ h3 {
   font-size: 0.875rem; }
 
 h4 {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   margin: 28.336px 0px 0px 0px;
   margin: 1.771rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
@@ -422,26 +422,21 @@ h4 {
   margin: 2.432rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
   padding: 1.0625rem 0rem 0rem 0rem;
-  font-size: 17px;
-  font-size: 1.0625rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  letter-spacing: 0.0625rem; }
+  font-size: 22.4px;
+  font-size: 1.4rem; }
 
 h5 {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 18.4px;
+  font-size: 1.15rem;
   margin: 28.336px 0px 0px 0px;
   margin: 1.771rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
   padding: 1.0625rem 0rem 0rem 0rem;
-  font-weight: normal;
-  font-style: italic;
-  text-decoration: underline; }
+  font-weight: bold; }
 
 .subsection h5 {
-  font-size: 17px;
-  font-size: 1.0625rem;
+  font-size: 18.4px;
+  font-size: 1.15rem;
   margin: 28.336px 0px 0px 0px;
   margin: 1.771rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
@@ -455,9 +450,8 @@ h6 {
   margin: 1.771rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
   padding: 1.0625rem 0rem 0rem 0rem;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: underline; }
+  font-weight: bold;
+  font-style: normal; }
 
 .subsection h6 {
   font-size: 17px;
@@ -468,9 +462,8 @@ h6 {
   margin: 1.771rem 0rem 0rem 0rem;
   padding: 17px 0px 0px 0px;
   padding: 1.0625rem 0rem 0rem 0rem;
-  font-weight: normal;
-  font-style: italic;
-  text-decoration: underline; }
+  font-weight: bold;
+  font-style: italic; }
 
 p, ul, ol, dl, figure {
   margin: 23.344px 0px 0px;
