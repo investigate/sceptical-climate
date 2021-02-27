@@ -1714,7 +1714,7 @@ hr {
 
   .primary-nav {
     width: 90%; }
-    
+
     .primary-nav ul a, .primary-nav ol a {
       font-size: 17px;
       font-size: 1.0625em;
@@ -1761,7 +1761,7 @@ body {
 
 table {
     font-size: 1em;
-    width: 100% !important; 	
+    width: 100% !important;
 }
 th {
 	background-image: none !important;
@@ -1778,10 +1778,10 @@ td {
     width: 80%;
     font-size: 28.336px;
     font-size: 2.771em;
-    line-height: 1.5; 
+    line-height: 1.5;
     font-style: normal;
     }
-    
+
 h2, .subsection h3 {
 font-size: 28.336px;
 font-size: 1.771em;
@@ -1809,8 +1809,8 @@ max-width: 66%; }
 .small-fig {
 margin-top: 23.344px;
 margin-top: 1.459em;
-max-width: 50%; } 
-    
+max-width: 50%; }
+
   /* PDF Bookmarks */
   h2#preface,
   h2#key-findings,
@@ -1819,11 +1819,11 @@ max-width: 50%; }
   h2#bibliography,
   h2#appendix
     {
-    bookmark-level: 1; 
+    bookmark-level: 1;
     bookmark-state: closed;
-    bookmark-target: self;	}    
+    bookmark-target: self;	}
   h2#findings {
-	bookmark-level: 1; 
+	bookmark-level: 1;
     bookmark-state: open;
     bookmark-target: self; }
   h3#research-design-methodology,
@@ -1837,7 +1837,7 @@ max-width: 50%; }
   h3#the-northern-territory-news
   h3#extreme-weather
    {
-	bookmark-level: 2; 
+	bookmark-level: 2;
     bookmark-state: closed;
     bookmark-target: self; }
 
@@ -1849,6 +1849,5 @@ max-width: 50%; }
 	@bottom-right {
 	    content: counter(page); }
 	}
-  
+
 */
-    
